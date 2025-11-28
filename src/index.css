@@ -1,0 +1,16 @@
+@import "tailwindcss";
+/* *{
+    border: 1px solid red;
+} */
+
+@theme {
+  --color-secondary: #05422c;
+  --color-white: #ffffff;
+  --color-text-gray: #46494f;
+  --color-button-green: #17AF26;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Lexend";
+}
