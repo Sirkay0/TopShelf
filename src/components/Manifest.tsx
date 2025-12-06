@@ -1,6 +1,6 @@
 const Manifest = () => {
   return (
-    <section className="bg-[#F2F6F4] py-16 px-6 flex flex-col gap-8 md:flex-row md:px-16 md:py-20 ">
+    <section className="bg-[#F2F6F4] py-16 px-6 flex flex-col gap-8 lg:flex-row md:px-16 md:py-20 ">
       <div className="flex gap-6 items-start">
         <div className="bg-white min-w-16 h-16 flex justify-center items-center  p-2 rounded-[100%] md:min-w-[100px] md:h-[100px]">
           <img

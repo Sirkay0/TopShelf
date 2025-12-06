@@ -10,6 +10,10 @@
   --color-button-green: #17AF26;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffffff;
   font-family: "Lexend";
