@@ -2,23 +2,23 @@ import Leftarrow from "../../src/assets/icons/arrow-left.svg";
 import Rightarrow from "../../src/assets/icons/arrow-right.svg";
 import { useRef, type ReactNode } from "react";
 
+const scrollLength = 310;
+
 const Carousel = ({ children }: { children: ReactNode }) => {
   const carouselContainerRef = useRef<HTMLDivElement | null>(null);
 
   const prevSlide = () => {
-   carouselContainerRef.current?.scrollBy({
-    left: -300,
-    behavior: "smooth"
-   })
-  }
+    carouselContainerRef.current?.scrollBy({
+      left: -scrollLength,
+      behavior: "smooth",
+    });
+  };
 
   const nextSlide = () => {
-   
     carouselContainerRef.current?.scrollTo({
-        left: carouselContainerRef.current.scrollLeft + 300,
-        behavior: "smooth",
-      });
-    
+      left: carouselContainerRef.current.scrollLeft + scrollLength,
+      behavior: "smooth",
+    });
   };
 
   return (

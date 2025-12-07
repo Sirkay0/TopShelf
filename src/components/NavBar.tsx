@@ -39,7 +39,7 @@ const NavBar = () => {
           <p className="text-text-gray text-sm font-normal">Your Account</p>
           <div className="w-px h-3 bg-gray-400"></div>
           <div className="">
-            <img src="../src/assets/icons/bag.svg" alt="cart" />
+            <img src="../assets/icons/bag.svg" alt="cart" />
           </div>
         </div>
         <div className="w-full pt-5 flex items-center justify-center gap-4 px-10 md:order-2 md:px-0 md:pt-0 border-t border-gray-300 md:border-none md:w-2/4 ">
