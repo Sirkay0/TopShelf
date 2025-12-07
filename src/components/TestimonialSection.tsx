@@ -8,7 +8,7 @@ const TestimonialSection = () => {
       <h1 className="text-[32px] leading-[120%] tracking-[-1.5px] font-semibold text-center text-[#1A1E26] w-full pr-6 md:pr-[60px] lg:pr-[120px]">
         CUSTOMER TESTIMONIALS
       </h1>
-      <div className="flex flex-col gap-8 items-center md:flex-row md:grid md:grid-cols-[minmax(0,379px)_minmax(0,1fr)]">
+      <div className="flex flex-col gap-8 items-center w-full md:flex-row md:grid md:grid-cols-[minmax(0,379px)_minmax(0,1fr)]">
         <div className="flex flex-col bg-secondary w-[342] md:min-w-[342px] gap-8 p-6 rounded-2xl md:h-[424px] md:p-10 ">
           <h2 className="text-[24px] leading-[150%] tracking-[-0.5px] font-medium text-left text-white md:text-[32px] md:font-semibold md:leading-[120%] md:tracking-[-1.5px] ">
             VOTED BEST ONLINE DISPENSARY IN CANADA
