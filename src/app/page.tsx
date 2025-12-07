@@ -1,3 +1,4 @@
+import TestimonialSection from "@/components/TestimonialSection";
 import BuyWeedSection from "../components/BuyWeedSection";
 import Hero from "../components/Hero";
 import Manifest from "../components/Manifest";
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Manifest />
       <BuyWeedSection />
+      <TestimonialSection />
     </main>
   );
 };
