@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Notification from "./notification";
+import Notification from "./Notification";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
