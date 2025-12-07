@@ -30,7 +30,7 @@ const NavBar = () => {
             ></span>
           </button>
           <img
-            src="../src/assets/images/Logo.svg"
+            src="/vite.svg"
             alt="Logo"
             className="w-35 h-full"
           />
