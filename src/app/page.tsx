@@ -16,7 +16,7 @@ const Home = () => {
       <Manifest />
       <BuyWeedSection />
       <TestimonialSection />
-      <ChooseWeedSection />
+      <ChooseWeedSection title={"CHOOSE YOUR WEED"} />
       <ReferalSection />
       <HowToSection />
       <Services />

@@ -10,7 +10,7 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Vikki Starr",
+    name: "Salau Mutiu",
     avatar: "/assets/images/Avatars/avatar1.png",
     rating: 4,
     text: "Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my door! I recommend them to all my friends and family for their 420 needs.",
@@ -18,7 +18,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Terry Baskey",
+    name: "Abdullah Yusuf",
     avatar: "/assets/images/Avatars/avatar2.png",
     rating: 5,
     text: "Best damn place to buy your cannabis at great prices.",
@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Michelle Gomez",
+    name: "Asiwaju Habeeb",
     avatar: "/assets/images/Avatars/avatar3.png",
     rating: 5,
     text: "Customer service was amazing. The products came fresh and the quality was top tier.",
@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 4,
-    name: "Ryan Brooks",
+    name: "Adesokan Emmanuel",
     avatar: "/assets/images/Avatars/avatar2.png",
     rating: 4,
     text: "Delivery was fast and everything came exactly as described. Will order again.",
