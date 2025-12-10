@@ -4,8 +4,10 @@ import ProductsCard from "./ProductsCard";
 
 const BuyWeedSection = () => {
   return (
-    <section className="flex flex-col gap-10 px-6 py-16 items-center md:pl-[60px] md:pr-0 md:pt-[120px] md:pb-[136px]
-    lg:pl-[120px]">
+    <section
+      className="flex flex-col gap-10 px-6 py-16 items-center md:pl-[60px] md:pr-0 md:pt-[120px] md:pb-[136px]
+    lg:pl-[120px]"
+    >
       <h1 className="text-[#1A1E26] font-semibold text-[32px] leading-[120%] tracking-[-1.5px] text-center md:text-[64px] md:tracking-[-4px] md:leading-[110%] lg:w-[948px] pr-6 md:pr-[60px] lg:pr-[120px]">
         BEST DISPENSARY TO BUY WEED ONLINE IN CANADA
       </h1>
@@ -48,7 +50,11 @@ const BuyWeedSection = () => {
         <div className="max-w-full">
           <Carousel>
             {products.map((product) => (
-              <ProductsCard key={product.id} product={product} />
+              <ProductsCard
+                key={product.id}
+                product={product}
+                variant="carousel"
+              />
             ))}
           </Carousel>
         </div>
