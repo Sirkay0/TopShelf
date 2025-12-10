@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import ChooseWeedSection from "@/components/ChooseWeedSection";
 import ReferalSection from "@/components/ReferalSection";
 import HowToSection from "@/components/HowToSection";
+import Services from "@/components/Services";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <ChooseWeedSection />
       <ReferalSection />
       <HowToSection />
+      <Services />
     </main>
   );
 };
