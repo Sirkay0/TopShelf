@@ -1,5 +1,4 @@
 import { Product } from "../../product";
-import Carousel from "./Carousel";
 
 type ProductsCardType = {
   product: Product;

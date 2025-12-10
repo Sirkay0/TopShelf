@@ -9,7 +9,7 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   title: "Top Shelf",
-  description: "Beest Weed Online Site",
+  description: "Best Weed Online Site",
 };
 
 export default function RootLayout({

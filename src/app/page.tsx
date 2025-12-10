@@ -16,10 +16,11 @@ const Home = () => {
       <Manifest />
       <BuyWeedSection />
       <TestimonialSection />
-      <ChooseWeedSection title={"CHOOSE YOUR WEED"} />
+      <ChooseWeedSection />
       <ReferalSection />
       <HowToSection />
       <Services />
+      
     </main>
   );
 };
