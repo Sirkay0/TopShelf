@@ -7,6 +7,11 @@ import ChooseWeedSection from "@/components/ChooseWeedSection";
 import ReferalSection from "@/components/ReferalSection";
 import HowToSection from "@/components/HowToSection";
 import Services from "@/components/Services";
+import RecentlyAdded from "@/components/RecentlyAdded";
+import StrainTypes from "@/components/StrainTypes";
+import WeedEducation from "@/components/WeedEducation";
+import ReavelCoupon from "@/components/ReavelCoupon";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -20,7 +25,11 @@ const Home = () => {
       <ReferalSection />
       <HowToSection />
       <Services />
-      
+      <RecentlyAdded />
+      <StrainTypes />
+      <WeedEducation />
+      <ReavelCoupon />
+      <Footer />
     </main>
   );
 };

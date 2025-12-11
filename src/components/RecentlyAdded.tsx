@@ -1,13 +1,13 @@
+import Link from "next/link";
 import { products } from "../../product";
 import ProductsCard from "./ProductsCard";
 
-
 const RecentlyAdded = () => {
   return (
-    <div className="flex flex-col gap-10 pl-6  md:px-[60px] lg:px-[120px] items-start pb-[213px] md:pb-[286px] ">
+    <div className="flex flex-col gap-10 pl-6  md:px-[60px] lg:px-[120px] items-start pb-16 md:pb-[120px] ">
       <div className="flex flex-col gap-6 w-full">
         <h2 className="text-[32px] font-semibold text-[#1A1E26] leading-[120%] tracking-[-1.5px] pr-6 md:pr-0 md:text-[64px] md:leading-[110%] md:tracking-[-4px] ">
-          CHOOSE YOUR WEED
+          RECENTLY ADDED
         </h2>
         <div className="flex flex-col gap-6 pb-6 w-full md:flex-row md:gap-10 md:items-center md:pb-8 border-b border-b-[#F4F4F4]">
           <p className="text-[16px] text-[#1A1E26] leading-[150%] md:text-[24px] tracking-[-0.5px] text-nowrap ">
@@ -30,10 +30,18 @@ const RecentlyAdded = () => {
               Shop All Weed
             </button>
           </div>
+          <div>
+            <Link
+              href="/"
+              className="text-button-green text-[16px] leading-[150%] text-nowrap underline hidden lg:block "
+            >
+              Show All
+            </Link>
+          </div>
         </div>
       </div>
       <div className="pr-6 w-full md:pr-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-8">
-        {products.map((product) => (
+        {products.slice(0, 4).map((product) => (
           <ProductsCard key={product.id} product={product} variant="grid" />
         ))}
       </div>
@@ -41,4 +49,4 @@ const RecentlyAdded = () => {
   );
 };
 
-export default RecentlyAdded
+export default RecentlyAdded;
