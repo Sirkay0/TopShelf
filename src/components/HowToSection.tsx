@@ -1,3 +1,5 @@
+import Bottun from "./Bottun";
+
 const HowToSection = () => {
   return (
     <div className="bg-[#01100B] -mt-[119px] md:-mt-44 pt-[183px] pb-16 md:pt-[296px] md:pb-28 w-full flex flex-col items-center">
@@ -16,7 +18,7 @@ const HowToSection = () => {
         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
           <div className="flex flex-col min-w-[159px] gap-4 items-center relative">
             <div className="flex justify-center items-center w-7 h-7 bg-[#F2BC1B] rounded-[100px] drop-shadow-sm absolute top-0 left-0 md:w-10 md:h-10 md:left-[20%]">
-              <p className="text-[14px] leading-[150%] font-medium text-[#05422C] md:text-[16px] ">
+              <p className="text-[14px] leading-[150%] font-medium text-[#05422C] md:text-[16px]  ">
                 1
               </p>
             </div>
@@ -95,9 +97,7 @@ const HowToSection = () => {
             </p>
           </div>
         </div>
-        <button className="text-[16px] leading-[150%] font-Lexend text-white px-10  h-14 md:h-16 md:px-14 rounded-[100px]  bg-button-green text-nowrap md:text-[18px] font-medium ">
-            Refer Here
-          </button>
+        <Bottun Children="Refer Here" classnames="text-[16px] md:text-[18px] px-10 py-4 md:py-6  md:px-11"/>
       </div>
     </div>
   );

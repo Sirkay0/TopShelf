@@ -1,3 +1,5 @@
+import Bottun from "./Bottun";
+
 const ReavelCoupon = () => {
   return (
     <div className="w-full flex items-center justify-center -mt-44 md:-mt-52 z-20 bg-[#F4F4F4]">
@@ -19,9 +21,7 @@ const ReavelCoupon = () => {
             placeholder="Email Address"
             className="py-4 px-6 rounded-[100px] border border-[#346654] text-[16px] leading-[150%] text-left md:px-11 md:py-6 w-full"
           />
-          <button className="text-[16px] leading-[150%] font-Lexend text-white px-11 py-4 md:py-6 rounded-[100px]  text-left bg-button-green  md:text-[18px] font-medium text-nowrap">
-            Reveal coupon
-          </button>
+          <Bottun Children="Refer Here" classnames="text-[16px] md:text-[18px] px-10 py-4 md:py-6  md:px-11"/>
         </form>
       </div>
     </div>

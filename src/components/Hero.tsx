@@ -1,3 +1,5 @@
+import Bottun from "./Bottun";
+
 const Hero = () => {
   return (
     <section className="mt-35 md:mt-40 bg-[url(/assets/images/mobile-bg-cover.png)] md:bg-[url(/assets/images/desktop-bg-cover.png)] h-[820px] w-full bg-cover bg-no-repeat bg-bottom ">
@@ -22,9 +24,7 @@ const Hero = () => {
               Free Shipping
             </p>
           </div>
-          <button className=" text-[18px] leading-[150%] font-Lexend text-white px-10 w-36 h-14 md:w-[185px] md:h-16 md:px-14 rounded-4xl bg-button-green text-nowrap">
-          Shop All 
-          </button>
+          <Bottun Children="Shop All" classnames="text-[16px] md:text-[18px] px-10 py-4 md:py-6  md:px-11" />
         </div>
       </div>
     </section>

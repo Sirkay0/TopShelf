@@ -1,3 +1,7 @@
+"use clent"
+
+import Bottun from "./Bottun";
+
 const ReferalSection = () => {
   return (
     <div className="w-full flex items-center justify-center relative -mt-[149px] md:-mt-[166px] z-20">
@@ -16,9 +20,7 @@ const ReferalSection = () => {
           </div>
         </div>
         <div>
-          <button className="text-[16px] leading-[150%] font-Lexend text-white px-10  h-14 md:h-16 md:px-14 rounded-[100px]  bg-button-green text-nowrap md:text-[18px] font-medium ">
-            Refer Here
-          </button>
+          <Bottun Children="Refer Here" classnames="text-[16px] md:text-[18px] px-10 py-4 md:py-6  md:px-11"/>
         </div>
       </div>
     </div>

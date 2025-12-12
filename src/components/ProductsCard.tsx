@@ -1,4 +1,5 @@
 import { Product } from "../../product";
+import Bottun from "./Bottun";
 
 type ProductsCardType = {
   product: Product;
@@ -152,9 +153,9 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
             {sizes[2]}
           </button>
         </div>
-        <button className="px-6 h-10 bg-button-green text-white rounded-[100px] text-[12px] font-medium leading-[150%] ">
-          Add to Cart
-        </button>
+        <Bottun Children="Add to Cart"
+        classnames="text-[12px] md:text-[14px] px-6 py-3"
+        />
       </div>
     </div>
   );
