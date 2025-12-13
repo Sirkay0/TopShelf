@@ -7,9 +7,9 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed flex flex-col top-0 left-0 bg-white pb-4 w-full z-500 shadow-lg ">
+    <header className="fixed flex flex-col top-0 left-0 bg-white pb-4 w-full z-20 shadow-lg ">
       <Notification />
-      <div className="flex   flex-wrap pt-3.5 px-6 md:px-16 ">
+      <div className="flex md:border-b md:border-b-[#F4F4F4]  flex-wrap pt-3.5 md:py-3.5 px-6 md:px-16 ">
         <div className="flex gap-4 items-center justify-start w-1/2 md:order-1  pb-5  md:pb-0 md:w-1/4">
           <button
             onClick={() => setOpen(!open)}
@@ -70,12 +70,21 @@ const NavBar = () => {
       )}
 
       <div
-        className={`absolute bg-secondary top-0 right-0 w-64 h-screen opacity-60 shadow-lg transform  transition-transform duration-300 z-600  ${
-          open ? "translate-x-0 " : "translate-x-64"
-        } 
-        md:static md:transform-none md:translate-x-0 md:h-auto md:opacity-100 md:bg-white md:shadow-none md:w-full md:py-4  `}
+        className={`absolute bg-[#02291b] top-8 left-0 w-4/5  opacity-80 shadow-lg transform  transition-all ease-in-out duration-300 z-600 flex flex-col items-center ${
+          open ? "translate-x-0 " : "-translate-x-[761px]"
+        } max-md:text-[16px] max-md:leading-[150%]
+        md:static md:transform-none md:translate-x-0 md:h-auto md:opacity-100 md:bg-white md:shadow-none md:w-full md:py-4 md:px-[68px] `}
       >
-        <nav className="flex flex-col gap-2 text-white text-lg font-bold text-left px-4 md:text-text-gray md:flex-row md:items-center md:justify-center md:flex-wrap md:text-base lg:gap-8 md:font-normal">
+        <div className="grid grid-cols-[1fr_24px] py-6 justify-between items-center md:hidden max-md:w-[80%]">
+          <div className="flex justify-center">
+          <img src="assets/images/white-logo.svg" alt="Topshelf Logo" />
+          </div>
+          <div className="relative h-6 w-6 flex justify-center items-center p-1 " onClick={() => setOpen(!open)}>
+            <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-white rounded-full -translate-y-1/2 rotate-45"></span>
+            <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-white rounded-full -translate-y-1/2 -rotate-45"></span>
+          </div>
+        </div>
+        <nav className="flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center md:flex-wrap md:text-base lg:gap-8 md:font-normal max-md:border-t  max-md:py-6 max-md:w-[80%] ">
           <a href="http://" className="text-nowrap">
             Shop All
           </a>
@@ -104,6 +113,11 @@ const NavBar = () => {
             Blog
           </a>
         </nav>
+        <div className="flex items-center justify-center text-[12px] gap-4 py-5  border-t border-white text-white font-medium w-[80%] md:hidden">
+          <p>Term of Service</p>
+          <div className="rounded-[100%] bg-white w-0.5 h-0.5"></div>
+          <p>Privacy Policy</p>
+        </div>
       </div>
     </header>
   );

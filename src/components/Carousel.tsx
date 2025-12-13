@@ -32,7 +32,7 @@ const Carousel = ({ children }: { children: ReactNode }) => {
 
       <button
         onClick={prevSlide}
-        className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.12)] absolute   top-[186px] left-0 md:left-8 flex items-center justify-center"
+        className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] absolute   top-[186px] left-0 md:left-8 flex items-center justify-center"
       >
         <img
           src={"/assets/icons/arrow-left.svg"}
@@ -42,7 +42,7 @@ const Carousel = ({ children }: { children: ReactNode }) => {
       </button>
       <button
         onClick={nextSlide}
-        className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.12)] absolute  top-[186px] right-0 md:right-8 flex items-center justify-center "
+        className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] absolute  top-[186px] right-0 md:right-8 flex items-center justify-center"
       >
         <img src={"/assets/icons/arrow-right.svg"} alt="Arrow right" />
       </button>
