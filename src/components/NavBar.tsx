@@ -77,9 +77,12 @@ const NavBar = () => {
       >
         <div className="grid grid-cols-[1fr_24px] py-6 justify-between items-center md:hidden max-md:w-[80%]">
           <div className="flex justify-center">
-          <img src="assets/images/white-logo.svg" alt="Topshelf Logo" />
+            <img src="assets/images/white-logo.svg" alt="Topshelf Logo" />
           </div>
-          <div className="relative h-6 w-6 flex justify-center items-center p-1 " onClick={() => setOpen(!open)}>
+          <div
+            className="relative h-6 w-6 flex justify-center items-center p-1 "
+            onClick={() => setOpen(!open)}
+          >
             <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-white rounded-full -translate-y-1/2 rotate-45"></span>
             <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-white rounded-full -translate-y-1/2 -rotate-45"></span>
           </div>
