@@ -117,7 +117,7 @@ const NavBar = () => {
           </a>
         </nav>
         <div className="flex items-center justify-center text-[12px] gap-4 py-5  border-t border-white text-white font-medium w-[80%] md:hidden">
-          <p>Term of Service</p>
+          <p>Terms of Service</p>
           <div className="rounded-[100%] bg-white w-0.5 h-0.5"></div>
           <p>Privacy Policy</p>
         </div>
