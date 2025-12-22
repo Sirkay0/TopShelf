@@ -35,7 +35,7 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
       size: "h-[32px] px-2.5",
     },
     grid: {
-      wrapper: "min-w-[159px] md:min-w-[200px] max-w-[295px] h-fill",
+      wrapper: "min-w-[159px] md:min-w-[200px] max-w-[295px] lg:max-w-[400px] h-fill",
       imageBox: "h-[160px] md:h-[240px]",
       image: "w-[120px] h-[120px] md:h-[164px] md:w-[164px]",
       outOfStock: "py-[1.0078125rem] md:py-[1.34375rem]",

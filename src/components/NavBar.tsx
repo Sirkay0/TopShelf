@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Notification from "./Notification";
+import Link from "next/link";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -88,9 +89,9 @@ const NavBar = () => {
           </div>
         </div>
         <nav className="flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center md:flex-wrap md:text-base lg:gap-8 md:font-normal max-md:border-t  max-md:py-6 max-md:w-[80%] ">
-          <a href="http://" className="text-nowrap">
+          <Link href="/category" className="text-nowrap">
             Shop All
-          </a>
+          </Link>
           <a href="http://" className="text-nowrap">
             Flower
           </a>

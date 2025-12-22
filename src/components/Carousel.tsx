@@ -4,7 +4,13 @@ import { useRef, type ReactNode } from "react";
 
 const scrollLength = 310;
 
-const Carousel = ({ children }: { children: ReactNode }) => {
+const Carousel = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
   const carouselContainerRef = useRef<HTMLDivElement | null>(null);
 
   const prevSlide = () => {
@@ -22,7 +28,7 @@ const Carousel = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className={"relative w-full" + className}>
       <div
         ref={carouselContainerRef}
         className="flex gap-6 w-full overflow-x-scroll transition-all duration-500 scroll-smooth"

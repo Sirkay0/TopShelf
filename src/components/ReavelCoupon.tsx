@@ -2,7 +2,7 @@ import Bottun from "./Bottun";
 
 const ReavelCoupon = () => {
   return (
-    <div className="w-full flex items-center justify-center -mt-44 md:-mt-52 z-20 bg-[#F4F4F4]">
+    <div className={`w-full flex items-center justify-center -mt-44 md:-mt-52 z-20 bg-transparent`}>
       <div className="w-[80%] bg-[#05422C] p-6 flex flex-col gap-1 md:p-16 md:gap-8 rounded-3xl">
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="text-[32px] font-semibold leading-[120%] tracking-[-1.5px] text-white md:text-[64px] md:leading-[110%] md:tracking-[-4px] text-left">
@@ -21,7 +21,10 @@ const ReavelCoupon = () => {
             placeholder="Email Address"
             className="py-4 px-6 rounded-[100px] border border-[#346654] text-[16px] leading-[150%] text-left md:px-11 md:py-6 w-full"
           />
-          <Bottun Children="Refer Here" classnames="text-[16px] md:text-[18px] px-10 py-4 md:py-6  md:px-11"/>
+          <Bottun
+            Children="Reveal coupon"
+            classnames="text-[16px] md:text-[18px] px-10 py-3 md:py-4  md:px-11"
+          />
         </form>
       </div>
     </div>

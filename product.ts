@@ -142,3 +142,62 @@ export const products: Product[] = [
     badge: null,
   },
 ];
+
+export type FeaturedProduct = {
+  id: number;
+  category: string;
+  title: string;
+  rating: number;
+  reviews: number;
+  sizes: string[];
+  price: number;
+  oldPrice: number;
+  image: string;
+};
+
+export const featuredProducts: FeaturedProduct[] = [
+  {
+    id: 1,
+    category: "CONCENTRATES",
+    title: "Mix And Match Shatter/Budder 28g (4 X 7g)",
+    rating: 4.8,
+    reviews: 135,
+    sizes: ["28g", "1/2lb", "1/4lb"],
+    price: 102,
+    oldPrice: 120,
+    image: "/assets/images/green-apple-weed.png",
+  },
+  {
+    id: 2,
+    category: "CONCENTRATES",
+    title: "Premium Live Resin Bundle 14g",
+    rating: 4.6,
+    reviews: 98,
+    sizes: ["14g", "7g", "1/4lb"],
+    price: 78,
+    oldPrice: 95,
+    image: "/assets/images/brown-weed.png",
+  },
+  {
+    id: 3,
+    category: "EDIBLES",
+    title: "Assorted THC Gummies Pack",
+    rating: 4.9,
+    reviews: 210,
+    sizes: ["500mg", "1000mg", "1/4lb"],
+    price: 45,
+    oldPrice: 55,
+    image: "/assets/images/green-snack.png",
+  },
+  {
+    id: 4,
+    category: "CONCENTRATES",
+    title: "Diamond Sauce Combo 21g",
+    rating: 4.7,
+    reviews: 162,
+    sizes: ["21g", "14g", "1/4lb"],
+    price: 89,
+    oldPrice: 110,
+    image: "/assets/images/black-weed.png",
+  },
+];

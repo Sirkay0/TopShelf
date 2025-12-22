@@ -26,7 +26,7 @@ const Hero = () => {
           </div>
           <Bottun
             Children="Shop All"
-            classnames="text-[16px] md:text-[18px] px-10 py-4 md:py-6  md:px-11"
+            classnames="text-[16px] md:text-[18px] px-10 py-3 md:py-4  md:px-11"
           />
         </div>
       </div>

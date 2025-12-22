@@ -16,3 +16,22 @@ body {
   background-color: #ffffff;
   font-family: "Lexend";
 }
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: white;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: white;
+  border: 2px solid black;
+  cursor: pointer;
+}
