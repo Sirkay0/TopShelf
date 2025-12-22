@@ -6,7 +6,7 @@ import ProductsCard from "./ProductsCard";
 import FeaturedCarousel from "./FeaturedCarousel";
 const Filter = () => {
   return (
-    <div className="mt-4 px-6 md:px-0 flex flex-col gap-6">
+    <div className="mt-4 px-6 md:px-0 flex flex-col gap-6 md:gap-16">
       <div className="pb-4 border-b border-[#F4F4F4] flex justify-between items-center">
         <h2 className="text-[16px] leading-[150%] text-left text-[#1A1E26] ">
           Shop
@@ -66,6 +66,36 @@ const Filter = () => {
         ))}
       </div>
       <FeaturedCarousel />
+      <div className=" w-full md:pr-0 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-8">
+        {products.slice(0, 6).map((product) => (
+          <ProductsCard key={product.id} product={product} variant="grid" />
+        ))}
+      </div>
+      <div className=" pt-6 flex flex-col gap-5 border-t border-[#F4F4F4] items-start min-[1000px]:flex-row min-[1000px]:items-center min-[1000px]:justify-between ">
+        <p className="font-light text-[12px] leading-[150%] text-left text-[#717378] md:text-[14px] ">
+          Showing 1-30 of 393 results
+        </p>
+        <div className="flex gap-4 md:gap-3 items-center">
+          <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center">
+            <img
+              src={"/assets/icons/arrow-left.svg"}
+              alt="Arrow left"
+              className="w-4 h-4 md:w-4 md:h-4"
+            />
+          </button>
+          <div className="flex gap-2 items-center">
+            <button className="flex items-center justify-center bg-[#F2F6F4] rounded-[100px] w-8 h-8 md:w-9 md:h-9 text-[12px] md:text-[14px] leading-[150%] text-[#05422C] ">1</button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 md:text-[14px] md:w-9 md:h-9 text-[12px] leading-[150%] text-[#1A1E26]">2</button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">3</button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">4</button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-5 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] ">...</button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] md:w-9 md:h-9">55</button>
+          </div>
+          <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center">
+            <img src={"/assets/icons/arrow-right.svg"} alt="Arrow right" className="w-4 h-4"/>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
