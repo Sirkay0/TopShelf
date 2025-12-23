@@ -8,7 +8,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed flex flex-col top-0 left-0 bg-white pb-4 w-full z-20 shadow-lg ">
+    <header className="fixed flex flex-col top-0 left-0 bg-white pb-4 w-full z-100 shadow-lg ">
       <Notification />
       <div className="flex md:border-b md:border-b-[#F4F4F4]  flex-wrap pt-3.5 md:py-3.5 px-6 md:px-16 ">
         <div className="flex gap-4 items-center justify-start w-1/2 md:order-1  pb-5  md:pb-0 md:w-1/4">

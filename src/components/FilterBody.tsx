@@ -8,7 +8,7 @@ import PriceFilter from "./PriceFilter";
 
 const FilterBody = () => {
   return (
-    <div className="w-[304px] pr-8 border-r border-[#F4F4F4] md:flex flex-col items-start gap-5 hidden">
+    <div className="md:w-[304px] max-w-[304px] pr-8 border-r border-[#F4F4F4] flex flex-col items-start gap-5">
       <div className="pt-[17px] pb-6 border-b border-[#F4F4F4] w-full">
         <h2 className="text-[18px] leading-[150%] text-left text-[#1A1E26] ">
           Filters

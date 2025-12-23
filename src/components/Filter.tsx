@@ -1,18 +1,30 @@
+"use client"
+
 import Image from "next/image";
 import ArrowDown from "../../public/assets/icons/arrow-down.svg";
 import Carousel from "./Carousel";
 import { products } from "../../product";
 import ProductsCard from "./ProductsCard";
 import FeaturedCarousel from "./FeaturedCarousel";
+import FilterBody from "./FilterBody";
+import { useState } from "react";
 const Filter = () => {
+
+  const [open, setOpen] = useState(false)
+
   return (
     <div className="mt-4 px-6 md:px-0 flex flex-col gap-6 md:gap-16">
-      <div className="pb-4 border-b border-[#F4F4F4] flex justify-between items-center">
+      <div className="pb-4 border-b border-[#F4F4F4] flex justify-between items-center relative">
+        <div className={`z-50 top-13 left-0 bg-white pl-5 pb-5 ${
+          open ? "absolute" : "hidden"
+        } `}>
+            <FilterBody />
+          </div>
         <h2 className="text-[16px] leading-[150%] text-left text-[#1A1E26] ">
           Shop
         </h2>
-        <div className="flex gap-2.5 items-center">
-          <button className="flex gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden ">
+        <div className="flex gap-2.5 items-center relative">
+          <button onClick={() => setOpen(!open)} className="flex gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden ">
             Filter
             <Image src={ArrowDown} alt="Arrow-down" width={12} height={12} />
           </button>
@@ -96,6 +108,12 @@ const Filter = () => {
           </button>
         </div>
       </div>
+      {open && (
+        <div
+          onClick={() => setOpen(!open)}
+          className="fixed inset-0 bg-black/10 z-40 md:hidden "
+        ></div>
+      )}
     </div>
   );
 };
