@@ -21,13 +21,13 @@ const FilterBody = ({ setOpen, open }: FilterBodyProp) => {
           Filters
         </h2>
         <div className="fixed top-4.5 right-6">
-        <div
-          className="relative  h-6 w-6 flex justify-center items-center p-1 md:hidden "
-          onClick={() => setOpen?.(!open)}
-        >
-          <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-button-green rounded-full -translate-y-1/2 rotate-45"></span>
-          <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-button-green rounded-full -translate-y-1/2 -rotate-45"></span>
-        </div>
+          <div
+            className="relative  h-6 w-6 flex justify-center items-center p-1 md:hidden "
+            onClick={() => setOpen?.(!open)}
+          >
+            <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-button-green rounded-full -translate-y-1/2 rotate-45"></span>
+            <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-button-green rounded-full -translate-y-1/2 -rotate-45"></span>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-5 pb-5 border-b border-[#F4F4F4] w-full">
