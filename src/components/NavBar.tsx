@@ -92,7 +92,9 @@ const NavBar = () => {
         </div>
         <div className="md:w-full w-[80%] md:overflow-scroll md:flex min-[1080px]:justify-center max-md:border-t max-md:border-white ">
         <nav className=" flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center  md:text-base lg:gap-8 md:font-normal   max-md:py-6 max-md:w-[80%] ">
-          <Link href="/category" className="text-nowrap">
+          <Link href="/category" 
+          onClick={() => setOpen(!open)}
+          className="text-nowrap">
             Shop All
           </Link>
           <a href="http://" className="text-nowrap">
