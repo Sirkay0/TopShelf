@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
 import Image from "next/image";
-import ArrowDown from "../../public/assets/icons/arrow-down.svg";
 import Carousel from "./Carousel";
 import { products } from "../../product";
 import ProductsCard from "./ProductsCard";
@@ -9,24 +8,33 @@ import FeaturedCarousel from "./FeaturedCarousel";
 import FilterBody from "./FilterBody";
 import { useState } from "react";
 const Filter = () => {
-
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="mt-4 px-6 md:px-0 flex flex-col gap-6 md:gap-16">
-      <div className="pb-4 border-b border-[#F4F4F4] flex justify-between items-center relative">
-        <div className={`z-50 top-13 left-0 bg-white pl-5 pb-5 ${
-          open ? "absolute" : "hidden"
-        } `}>
-            <FilterBody />
-          </div>
+    <div className="mt-4 px-6 md:px-0 flex flex-col gap-6 md:gap-16 ">
+      <div className="pb-4 border-b border-[#F4F4F4] flex justify-between items-center ">
+        <div
+          className={`z-200 top-0 left-0 bg-white pl-5 pb-5 h-dvh overflow-scroll ${
+            open ? "fixed" : "hidden"
+          } `}
+        >
+          <FilterBody open={open} setOpen={setOpen} />
+        </div>
         <h2 className="text-[16px] leading-[150%] text-left text-[#1A1E26] ">
           Shop
         </h2>
         <div className="flex gap-2.5 items-center relative">
-          <button onClick={() => setOpen(!open)} className="flex gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden ">
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden "
+          >
             Filter
-            <Image src={ArrowDown} alt="Arrow-down" width={12} height={12} />
+            <Image
+              src="/assets/icons/arrow-down.svg"
+              alt="Arrow-down"
+              width={12}
+              height={12}
+            />
           </button>
           <div className="flex px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] gap-1 relative text-[12px] leading-[150%] text-[#1A1E26]">
             <label htmlFor="sort">Sort By</label>
@@ -36,7 +44,12 @@ const Filter = () => {
               <option value="categogry">categogry</option>
             </select>
             <span className="absolute top-[11px] right-3.5 pointer-events-none">
-              <Image src={ArrowDown} alt="Arrow-down" width={12} height={12} />
+              <Image
+                src="/assets/icons/arrow-down.svg"
+                alt="Arrow-down"
+                width={12}
+                height={12}
+              />
             </span>
           </div>
         </div>
@@ -96,15 +109,31 @@ const Filter = () => {
             />
           </button>
           <div className="flex gap-2 items-center">
-            <button className="flex items-center justify-center bg-[#F2F6F4] rounded-[100px] w-8 h-8 md:w-9 md:h-9 text-[12px] md:text-[14px] leading-[150%] text-[#05422C] ">1</button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 md:text-[14px] md:w-9 md:h-9 text-[12px] leading-[150%] text-[#1A1E26]">2</button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">3</button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">4</button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-5 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] ">...</button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] md:w-9 md:h-9">55</button>
+            <button className="flex items-center justify-center bg-[#F2F6F4] rounded-[100px] w-8 h-8 md:w-9 md:h-9 text-[12px] md:text-[14px] leading-[150%] text-[#05422C] ">
+              1
+            </button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 md:text-[14px] md:w-9 md:h-9 text-[12px] leading-[150%] text-[#1A1E26]">
+              2
+            </button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">
+              3
+            </button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">
+              4
+            </button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-5 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] ">
+              ...
+            </button>
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] md:w-9 md:h-9">
+              55
+            </button>
           </div>
           <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center">
-            <img src={"/assets/icons/arrow-right.svg"} alt="Arrow right" className="w-4 h-4"/>
+            <img
+              src={"/assets/icons/arrow-right.svg"}
+              alt="Arrow right"
+              className="w-4 h-4"
+            />
           </button>
         </div>
       </div>

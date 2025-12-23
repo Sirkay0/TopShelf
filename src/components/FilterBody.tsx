@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   orderOptions,
@@ -6,13 +8,25 @@ import {
 } from "../../lib/radiodata";
 import PriceFilter from "./PriceFilter";
 
-const FilterBody = () => {
+type FilterBodyProp = {
+  setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+  open?: boolean;
+};
+
+const FilterBody = ({ setOpen, open }: FilterBodyProp) => {
   return (
-    <div className="md:w-[304px] max-w-[304px] pr-8 border-r border-[#F4F4F4] flex flex-col items-start gap-5">
-      <div className="pt-[17px] pb-6 border-b border-[#F4F4F4] w-full">
+    <div className="md:w-[304px] w-dvw pr-8 border-r border-[#F4F4F4] flex flex-col items-start gap-5">
+      <div className="flex justify-between items-center pt-[17px] pb-6 border-b border-[#F4F4F4] w-full">
         <h2 className="text-[18px] leading-[150%] text-left text-[#1A1E26] ">
           Filters
         </h2>
+        <div
+          className="relative h-6 w-6 flex justify-center items-center p-1 md:hidden "
+          onClick={() => setOpen?.(!open)}
+        >
+          <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-button-green rounded-full -translate-y-1/2 rotate-45"></span>
+          <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-button-green rounded-full -translate-y-1/2 -rotate-45"></span>
+        </div>
       </div>
       <div className="flex flex-col gap-5 pb-5 border-b border-[#F4F4F4] w-full">
         <h2 className="text-[12px] leading-[150%] font-light text-left tracking-[1px] text-[#717378] ">

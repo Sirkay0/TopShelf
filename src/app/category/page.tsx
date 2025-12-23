@@ -6,8 +6,8 @@ const CategoryPage = () => {
   return (
     <main>
       <MiniManifest />
-      <section className="md:px-16 md:grid md:grid-cols-[304px_1fr] md:gap-x-8 mb-[232px] md:mb-[336px]">
-        <div className="hidden md:block h-screen">
+      <section className="md:px-16 md:grid md:grid-cols-[304px_1fr] md:gap-x-8 mb-[232px] md:mb-[336px] relative">
+        <div className="hidden md:block overflow-scroll h-dvh">
         <FilterBody />
         </div>
         <div className="md:overflow-hidden">

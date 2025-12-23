@@ -1,8 +1,4 @@
 import Image from "next/image";
-import TruckIcon from "../../public/assets/icons/truck-fast.svg";
-import SafeHome from "../../public/assets/icons/safe-home.svg";
-import Coins from "../../public/assets/icons/coin.svg";
-
 const MiniManifest = () => {
   return (
     <section className=" mt-43 bg-[#F2F6F4] px-6 py-4 md:py-6 md:px-16">
@@ -11,7 +7,7 @@ const MiniManifest = () => {
           <div className="bg-white p-2 rounded-[100px]">
             <div className="relative aspect-square w-[18px] md:w-[26px] rounded-[100px] ">
               <Image
-                src={TruckIcon}
+                src="/assets/icons/truck-fast.svg"
                 alt="Truck-Icon"
                 fill
                 className="object-cover"
@@ -27,7 +23,7 @@ const MiniManifest = () => {
           <div className="bg-white p-2 rounded-[100px]">
             <div className="relative aspect-square w-[18px] md:w-[26px] rounded-[100px] ">
               <Image
-                src={SafeHome}
+                src="/assets/icons/safe-home.svg"
                 alt="Truck-Icon"
                 fill
                 className="object-cover"
@@ -43,7 +39,7 @@ const MiniManifest = () => {
           <div className="bg-white p-2 rounded-[100px]">
             <div className="relative aspect-square w-[18px] md:w-[26px] rounded-[100px] ">
               <Image
-                src={Coins}
+                src="/assets/icons/coin.svg"
                 alt="Truck-Icon"
                 fill
                 className="object-cover"

@@ -80,7 +80,7 @@ const NavBar = () => {
       >
         <div className="grid grid-cols-[1fr_24px] py-6 justify-between items-center md:hidden max-md:w-[80%]">
           <div className="flex justify-center">
-            <img src="assets/images/white-logo.svg" alt="Topshelf Logo" />
+            <img src="/assets/images/white-logo.svg" alt="Topshelf Logo" />
           </div>
           <div
             className="relative h-6 w-6 flex justify-center items-center p-1 "
@@ -90,7 +90,8 @@ const NavBar = () => {
             <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-white rounded-full -translate-y-1/2 -rotate-45"></span>
           </div>
         </div>
-        <nav className="flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center md:flex-wrap md:text-base lg:gap-8 md:font-normal max-md:border-t  max-md:py-6 max-md:w-[80%] ">
+        <div className="md:w-full w-[80%] md:overflow-scroll md:flex min-[1080px]:justify-center max-md:border-t max-md:border-white ">
+        <nav className=" flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center  md:text-base lg:gap-8 md:font-normal   max-md:py-6 max-md:w-[80%] ">
           <Link href="/category" className="text-nowrap">
             Shop All
           </Link>
@@ -119,6 +120,7 @@ const NavBar = () => {
             Blog
           </a>
         </nav>
+        </div>
         <div className="flex items-center justify-center text-[12px] gap-4 py-5  border-t border-white text-white font-medium w-[80%] md:hidden">
           <p>Terms of Service</p>
           <div className="rounded-[100%] bg-white w-0.5 h-0.5"></div>

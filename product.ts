@@ -1,5 +1,6 @@
 export type Product = {
   id: number;
+  slug: string;
   title: string;
   category: string;
   image: string;
@@ -17,6 +18,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 1,
+    slug: "mix-and-match-shatter-budder-28g",
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     category: "CONCENTRATES",
     image: "/assets/images/brown-weed.png",
@@ -30,9 +32,9 @@ export const products: Product[] = [
     inStock: false,
     badge: null,
   },
-
   {
     id: 2,
+    slug: "watermelon-zkittles-purple-gushers",
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     category: "FLOWER",
     image: "/assets/images/purple-weed.png",
@@ -46,9 +48,9 @@ export const products: Product[] = [
     inStock: true,
     badge: null,
   },
-
   {
     id: 3,
+    slug: "ahi-tuna-master-tuna-2oz",
     title: "2 Oz Deal Ahi Tuna + Master Tuna",
     category: "FLOWER",
     image: "/assets/images/white-snack.png",
@@ -62,9 +64,9 @@ export const products: Product[] = [
     inStock: true,
     badge: "$60 ounce",
   },
-
   {
     id: 4,
+    slug: "mix-and-match-shatter-budder-28g-variant-1",
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     category: "CONCENTRATES",
     image: "/assets/images/brown-weed.png",
@@ -80,6 +82,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
+    slug: "mix-and-match-shatter-budder-28g-variant-2",
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     category: "CONCENTRATES",
     image: "/assets/images/brown-weed.png",
@@ -93,9 +96,9 @@ export const products: Product[] = [
     inStock: false,
     badge: null,
   },
-
   {
     id: 6,
+    slug: "watermelon-zkittles-purple-gushers-variant",
     title: "2 Oz Deal Watermelon Zkittles + Purple Gushers",
     category: "FLOWER",
     image: "/assets/images/purple-weed.png",
@@ -109,9 +112,9 @@ export const products: Product[] = [
     inStock: true,
     badge: null,
   },
-
   {
     id: 7,
+    slug: "ahi-tuna-master-tuna-2oz-variant",
     title: "2 Oz Deal Ahi Tuna + Master Tuna",
     category: "FLOWER",
     image: "/assets/images/white-snack.png",
@@ -125,9 +128,9 @@ export const products: Product[] = [
     inStock: true,
     badge: "$60 ounce",
   },
-
   {
     id: 8,
+    slug: "mix-and-match-shatter-budder-28g-variant-3",
     title: "Mix And Match Shatter/Budder 28g (4 X 7G)",
     category: "CONCENTRATES",
     image: "/assets/images/brown-weed.png",
@@ -145,6 +148,7 @@ export const products: Product[] = [
 
 export type FeaturedProduct = {
   id: number;
+  slug: string;
   category: string;
   title: string;
   rating: number;
@@ -158,6 +162,7 @@ export type FeaturedProduct = {
 export const featuredProducts: FeaturedProduct[] = [
   {
     id: 1,
+    slug: "featured-mix-and-match-shatter-budder-28g",
     category: "CONCENTRATES",
     title: "Mix And Match Shatter/Budder 28g (4 X 7g)",
     rating: 4.8,
@@ -169,6 +174,7 @@ export const featuredProducts: FeaturedProduct[] = [
   },
   {
     id: 2,
+    slug: "premium-live-resin-bundle-14g",
     category: "CONCENTRATES",
     title: "Premium Live Resin Bundle 14g",
     rating: 4.6,
@@ -180,6 +186,7 @@ export const featuredProducts: FeaturedProduct[] = [
   },
   {
     id: 3,
+    slug: "assorted-thc-gummies-pack",
     category: "EDIBLES",
     title: "Assorted THC Gummies Pack",
     rating: 4.9,
@@ -191,6 +198,7 @@ export const featuredProducts: FeaturedProduct[] = [
   },
   {
     id: 4,
+    slug: "diamond-sauce-combo-21g",
     category: "CONCENTRATES",
     title: "Diamond Sauce Combo 21g",
     rating: 4.7,
