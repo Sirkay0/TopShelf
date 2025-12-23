@@ -26,7 +26,7 @@ const Filter = () => {
         <div className="flex gap-2.5 items-center relative">
           <button
             onClick={() => setOpen(!open)}
-            className="flex gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden "
+            className="flex items-center gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden "
           >
             Filter
             <Image

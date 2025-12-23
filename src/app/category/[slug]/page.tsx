@@ -1,4 +1,4 @@
-const CategoryPage = () => {
+const CategoryDetail = () => {
   return (
     <div>
        
@@ -6,4 +6,4 @@ const CategoryPage = () => {
   )
 }
 
-export default CategoryPage
+export default CategoryDetail
