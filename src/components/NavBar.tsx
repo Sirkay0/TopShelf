@@ -32,11 +32,13 @@ const NavBar = () => {
               }`}
             ></span>
           </button>
-          <img
-            src="/assets/images/Logo.svg"
-            alt="Logo"
-            className="w-35 h-full"
-          />
+          <Link href="/">
+            <img
+              src="/assets/images/Logo.svg"
+              alt="Logo"
+              className="w-35 h-full"
+            />
+          </Link>
         </div>
         <div className="flex items-center gap-4 justify-end w-1/2 md:w-1/4 md:order-3  pb-5 md:pb-0 lg:mx ">
           <p className="text-text-gray text-sm font-normal">Your Account</p>
