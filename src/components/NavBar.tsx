@@ -90,7 +90,7 @@ const NavBar = () => {
             <span className="absolute left-0 top-1/2 block h-0.5 w-full bg-white rounded-full -translate-y-1/2 -rotate-45"></span>
           </div>
         </div>
-        <div className="md:w-full w-[80%] md:overflow-scroll md:flex min-[1080px]:justify-center max-md:border-t max-md:border-white ">
+        <div className="md:w-full w-[80%] md:overflow-x-auto md:flex min-[1080px]:justify-center max-md:border-t max-md:border-white ">
         <nav className=" flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center  md:text-base lg:gap-8 md:font-normal   max-md:py-6 max-md:w-[80%] ">
           <Link href="/category" 
           onClick={() => setOpen(!open)}
