@@ -108,7 +108,7 @@ const FilterBody = ({ setOpen, open }: FilterBodyProp) => {
         </div>
       </div>
       <button className="px-8 py-[9.5px] rounded-[1000px] bg-[#F3FBF4]">
-        <p className="text-button-green text-[14px] leading-[150%]">
+        <p className="text-button-green text-[14px] leading-[150%] cursor-pointer">
           Clear Filters
         </p>
       </button>

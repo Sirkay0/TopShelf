@@ -52,7 +52,7 @@ const TabTestimonial = () => {
 
         <button
           onClick={() => setShowAll(!showAll)}
-          className="px-6 rounded-[100px] bg-white border border-[#F3FBF4] text-button-green py-[9.5px] text-[14px] leading-[150%]"
+          className="px-6 rounded-[100px] bg-white border border-[#F3FBF4] text-button-green py-[9.5px] text-[14px] leading-[150%] cursor-pointer"
         >
           {showAll ? "Show Less" : "Show More"}
         </button>

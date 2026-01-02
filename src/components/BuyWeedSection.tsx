@@ -13,13 +13,13 @@ const BuyWeedSection = () => {
       </h1>
       <div className="flex w-full justify-center pr-6 md:pr-[60px] lg:pr-[120px]">
         <div className="flex gap-4 w-434px overflow-auto md:w-full md:justify-center md:gap-8 ">
-          <button className="w-[120px]  h-10 px-5 bg-[#F2F6F4] border border-[#05422C] rounded-[100px] text-[#05422C] text-[14px] font-medium leading-[150%] text-nowrap md:w-full md:h-12 md:py-2  md:text-[16px]  ">
+          <button className="w-[120px]  h-10 px-5 bg-[#F2F6F4] border border-[#05422C] rounded-[100px] text-[#05422C] text-[14px] font-medium leading-[150%] text-nowrap md:w-full md:h-12 md:py-2  md:text-[16px] cursor-pointer ">
             Best Sellers
           </button>
-          <button className="w-[189px] h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap md:w-full md:h-12 md:text-[16px] ">
+          <button className="w-[189px] h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap md:w-full md:h-12 md:text-[16px] cursor-pointer ">
             Bundles & Promotions
           </button>
-          <button className="w-[93px] h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap md:w-full md:h-12 md:text-[16px] ">
+          <button className="w-[93px] h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap md:w-full md:h-12 md:text-[16px] cursor-pointer ">
             On Sale
           </button>
         </div>

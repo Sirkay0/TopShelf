@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className="flex gap-4 items-center justify-start w-1/2 md:order-1  pb-5  md:pb-0 md:w-1/4">
           <button
             onClick={() => setOpen(!open)}
-            className="flex flex-col gap-1.5 group md:hidden z-700"
+            className="flex flex-col gap-1.5 group md:hidden z-700 cursor-pointer"
           >
             <span
               className={`h-0.5 w-6 bg-secondary transition-all duration-300 ${
@@ -32,7 +32,7 @@ const NavBar = () => {
               }`}
             ></span>
           </button>
-          <Link href="/">
+          <Link href="/" className="cursor-pointer">
             <img
               src="/assets/images/Logo.svg"
               alt="Logo"
@@ -41,9 +41,9 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="flex items-center gap-4 justify-end w-1/2 md:w-1/4 md:order-3  pb-5 md:pb-0 lg:mx ">
-          <p className="text-text-gray text-sm font-normal">Your Account</p>
+          <p className="text-text-gray text-sm font-normal cursor-pointer">Your Account</p>
           <div className="w-px h-3 bg-gray-400"></div>
-          <div className="">
+          <div className="cursor-pointer">
             <img src="/assets/icons/bag.svg" alt="cart" />
           </div>
         </div>
@@ -55,7 +55,7 @@ const NavBar = () => {
             placeholder="Search"
             className="border border-gray-400 rounded-2xl w-full py-1.5 px-3 md:w-100 text-[16px] leading-[150%]"
           />
-          <button className="h-9 min-w-9 bg-button-green flex justify-center items-center rounded-[100px]">
+          <button className="h-9 min-w-9 bg-button-green flex justify-center items-center rounded-[100px] cursor-pointer">
             <img
               src="/assets/icons/search-icon.svg"
               alt="Search-Icon"
@@ -94,7 +94,7 @@ const NavBar = () => {
         <nav className=" flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center  md:text-base lg:gap-8 md:font-normal   max-md:py-6 max-md:w-[80%] ">
           <Link href="/category" 
           onClick={() => setOpen(!open)}
-          className="text-nowrap">
+          className="text-nowrap cursor-pointer">
             Shop All
           </Link>
           <a href="http://" className="text-nowrap">

@@ -14,26 +14,26 @@ const RecentlyAdded = () => {
             Filter by Interest
           </p>
           <div className="flex gap-4 w-full overflow-auto md:gap-6 ">
-            <button className=" h-10 px-5 bg-[#F2F6F4] border border-[#05422C] rounded-[100px] text-[#05422C] text-[14px] font-medium leading-[150%] text-nowrap  md:h-12 md:py-2  md:text-[16px]  ">
+            <button className=" h-10 px-5 bg-[#F2F6F4] border border-[#05422C] rounded-[100px] text-[#05422C] text-[14px] font-medium leading-[150%] text-nowrap  md:h-12 md:py-2  md:text-[16px] cursor-pointer ">
               Flowers
             </button>
-            <button className=" h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap  md:h-12 md:text-[16px] ">
+            <button className=" h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap  md:h-12 md:text-[16px] cursor-pointer">
               Mushrooms
             </button>
-            <button className="h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap  md:h-12 md:text-[16px] ">
+            <button className="h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap  md:h-12 md:text-[16px] cursor-pointer">
               Concentrate
             </button>
-            <button className="h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap  md:h-12 md:text-[16px] ">
+            <button className="h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap  md:h-12 md:text-[16px] cursor-pointer">
               Edibles
             </button>
-            <button className="h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap md:h-12 md:text-[16px] ">
+            <button className="h-10 px-5 py-2 bg-[#FFFFFF] border border-[#F4F4F4] rounded-[100px] text-[#46494F] text-[14px] leading-[150%] font-normal text-nowrap md:h-12 md:text-[16px] cursor-pointer">
               Shop All Weed
             </button>
           </div>
           <div>
             <Link
               href="/"
-              className="text-button-green text-[16px] leading-[150%] text-nowrap underline hidden lg:block "
+              className="text-button-green text-[16px] leading-[150%] text-nowrap underline hidden lg:block cursor-pointer"
             >
               Show All
             </Link>

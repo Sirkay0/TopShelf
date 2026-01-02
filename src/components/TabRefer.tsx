@@ -28,7 +28,7 @@ const TabRefer = () => {
               </p>
             </div>
             <div className="self-center">
-              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px]">
+              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px] cursor-pointer">
                 <div className="relative h-[18px] aspect-square">
                   <Image
                     src="/assets/icons/copy.svg"
@@ -53,7 +53,7 @@ const TabRefer = () => {
               </p>
             </div>
             <div className="self-center">
-              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px]">
+              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px] cursor-pointer">
                 <div className="relative h-[18px] aspect-square">
                   <Image
                     src="/assets/icons/copy.svg"
@@ -144,7 +144,7 @@ const TabRefer = () => {
                   />
                 </div>
                 <div className="self-end">
-                  <button className="flex items-center justify-center bg-[#F3FBF4] h-12 w-12 rounded-[100px] border border-[#F3FBF4]">
+                  <button className="flex items-center justify-center bg-[#F3FBF4] h-12 w-12 rounded-[100px] border border-[#F3FBF4] cursor-pointer">
                     <div className="relative h-[26px] aspect-square">
                       <Image
                         src="/assets/icons/add-green.svg"

@@ -6,7 +6,7 @@ const NotFoundPage = () => {
   return (
     <div>
       Not Found, check another URl
-      <Link href={"/"}>Go back to Home Page</Link>
+      <Link href={"/"} className='cursor-pointer'>Go back to Home Page</Link>
     </div>
   )
 }

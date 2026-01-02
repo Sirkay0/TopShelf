@@ -11,7 +11,7 @@ const WeedEducation = () => {
             </h2>
             <Link
               href="/"
-              className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+              className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
             >
               Show All
             </Link>
@@ -38,7 +38,7 @@ const WeedEducation = () => {
               </div>
               <Link
                 href="/"
-                className="text-button-green text-[16px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+                className="text-button-green text-[16px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
               >
                 Read More
               </Link>
@@ -64,7 +64,7 @@ const WeedEducation = () => {
               </div>
               <Link
                 href="/"
-                className="text-button-green text-[16px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+                className="text-button-green text-[16px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
               >
                 Read More
               </Link>
@@ -91,7 +91,7 @@ const WeedEducation = () => {
               </div>
               <Link
                 href="/"
-                className="text-button-green text-[16px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+                className="text-button-green text-[16px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
               >
                 Read More
               </Link>

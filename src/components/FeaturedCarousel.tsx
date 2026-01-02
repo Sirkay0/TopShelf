@@ -54,13 +54,13 @@ const FeaturedCarousel = () => {
             </div>
           </div>
           <div className="flex gap-2 items-center">
-            <button className="px-2.5 pt-1 pb-[5px] rounded-sm bg-white/8 border border-white/20 text-white text-[12px] leading-[150%] ">
+            <button className="px-2.5 pt-1 pb-[5px] rounded-sm bg-white/8 border border-white/20 text-white text-[12px] leading-[150%] cursor-pointer ">
               {featuredProducts[currentIndex].sizes[0]}
             </button>
-            <button className="px-2.5 pt-1 pb-[5px] rounded-sm bg-white/8 border border-white/20 text-white text-[12px] leading-[150%] ">
+            <button className="px-2.5 pt-1 pb-[5px] rounded-sm bg-white/8 border border-white/20 text-white text-[12px] leading-[150%] cursor-pointer ">
               {featuredProducts[currentIndex].sizes[1]}
             </button>
-            <button className="px-2.5 pt-1 pb-[5px] rounded-sm bg-white/8 border border-white/20 text-white text-[12px] leading-[150%] ">
+            <button className="px-2.5 pt-1 pb-[5px] rounded-sm bg-white/8 border border-white/20 text-white text-[12px] leading-[150%] cursor-pointer ">
               {featuredProducts[currentIndex].sizes[2]}
             </button>
           </div>
@@ -93,7 +93,7 @@ const FeaturedCarousel = () => {
 
           <button
             onClick={prev}
-            className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] absolute   top-[145px] -left-3.5  flex items-center justify-center"
+            className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] absolute   top-[145px] -left-3.5  flex items-center justify-center cursor-pointer"
           >
             <img
               src={"/assets/icons/arrow-left.svg"}
@@ -103,7 +103,7 @@ const FeaturedCarousel = () => {
           </button>
           <button
             onClick={next}
-            className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] absolute  top-[145px] -right-3.5  flex items-center justify-center"
+            className="w-9 h-9 rounded-[100px] bg-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] absolute  top-[145px] -right-3.5  flex items-center justify-center cursor-pointer"
           >
             <img src={"/assets/icons/arrow-right.svg"} alt="Arrow right" />
           </button>

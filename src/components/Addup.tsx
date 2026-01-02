@@ -16,7 +16,7 @@ const Addup = () => {
 
   return (
     <div className="flex gap-1">
-      <button onClick={Subtract} className="p-2.5 rounded-sm">
+      <button onClick={Subtract} className="p-2.5 rounded-sm cursor-pointer">
         <div className="relative aspect-square w-4">
           <Image
             src="/assets/icons/minus.svg"
@@ -29,7 +29,7 @@ const Addup = () => {
       <div className="rounded-sm bg-[#F4F4F4] text-[12px] leading-[150%] text-[#060709] px-[14.5px] py-[9px]">
         {amt}
       </div>
-      <button onClick={add} className="p-2.5 rounded-sm">
+      <button onClick={add} className="p-2.5 rounded-sm cursor-pointer">
         <div className="relative aspect-square w-4">
           <Image
             src="/assets/icons/add.svg"

@@ -52,7 +52,7 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
   const current = variants[variant];
 
   return (
-    <Link href={`/category/${slug}`}>
+    <Link href={`/category/${slug}`} className="cursor-pointer">
     <div className={`${current.wrapper} flex  flex-col gap-6`}>
       <div
         className={`w-full ${current.imageBox} bg-[#F4F4F4] rounded-lg flex justify-center items-center relative`}
@@ -141,17 +141,17 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
         </div>
         <div className="flex gap-2 items-center">
           <button
-            className={` ${current.size} bg rounded-sm border border-[#F4F4F4] `}
+            className={` ${current.size} bg rounded-sm border border-[#F4F4F4] cursor-pointer`}
           >
             {sizes[0]}
           </button>
           <button
-            className={` ${current.size} bg rounded-sm border border-[#F4F4F4] `}
+            className={` ${current.size} bg rounded-sm border border-[#F4F4F4] cursor-pointer`}
           >
             {sizes[1]}
           </button>
           <button
-            className={` ${current.size} bg rounded-sm border border-[#F4F4F4] `}
+            className={` ${current.size} bg rounded-sm border border-[#F4F4F4] cursor-pointer`}
           >
             {sizes[2]}
           </button>

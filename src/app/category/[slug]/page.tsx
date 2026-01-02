@@ -8,29 +8,26 @@ import Addup from "@/components/Addup";
 const CategoryDetail = async ({
   params,
 }: {
-  params: 
-    Promise<{slug: string}>;
+  params: Promise<{ slug: string }>;
 }) => {
-  const {slug} = await params
+  const { slug } = await params;
 
   const getProductDetails = async (slug: string): Promise<Product> => {
-    const foundProduct = products.find(
-      product => product.slug === slug
-    )
+    const foundProduct = products.find((product) => product.slug === slug);
 
     if (!foundProduct) {
-      throw new Error(`Product ${slug} is not available`)
+      throw new Error(`Product ${slug} is not available`);
     }
 
-    return foundProduct
-  }
+    return foundProduct;
+  };
 
-  const product = await getProductDetails(slug)
+  const product = await getProductDetails(slug);
   return (
     <>
       <div className="mt-[177px] px-6 md:px-16 pt-6 md:pt-10 ">
         <div className="flex flex-col gap-10 md:gap-24 md:flex-row">
-          <ImageGallery />
+          <ImageGallery productImg={product.image} />
           <div className="flex flex-col gap-5 md:w-1/2">
             <div className="flex flex-col gap-3 md:gap-4 items-start">
               <h2 className="text-[#9D9EA2] text-[12px] leading-[150%] tracking-[2px] md:text-[14px]  ">
@@ -53,9 +50,13 @@ const CategoryDetail = async ({
               </div>
               <div className="flex justify-between items-center w-full">
                 <div className="flex gap-2 md:gap-3 items-center">
-                  <p className="text-[14px] leading-[150%] text-[#9D9EA2] line-through md:text-[16px] ">
-                    {`$${product.oldPrice}`}
-                  </p>
+                  {product.oldPrice ? (
+                    <p className="text-[14px] leading-[150%] text-[#9D9EA2] line-through md:text-[16px] ">
+                      {`$${product.oldPrice}`}
+                    </p>
+                  ) : (
+                    ""
+                  )}
                   <p className="text-[16px] font-medium leading-[150%] text-[#EB2606] md:text-[20px]">
                     {`$${product.price}`}
                   </p>
@@ -164,13 +165,13 @@ const CategoryDetail = async ({
                     WEIGHT
                   </h2>
                   <div className="flex gap-4 items-center ">
-                    <button className="px-3.5 pt-1 pb-[5px] bg-[#F3FBF4] border border-button-green rounded-sm text-[#060709] text-[12px] leading-[150%] ">
+                    <button className="px-3.5 pt-1 pb-[5px] bg-[#F3FBF4] border border-button-green rounded-sm text-[#060709] text-[12px] leading-[150%] cursor-pointer">
                       {product.sizes[0]}
                     </button>
-                    <button className="px-3.5 pt-1 pb-[5px] bg-[#F4F4F4] border border-[#F4F4F4] rounded-sm text-[#060709] text-[12px] leading-[150%] ">
-                     {product.sizes[1]}
+                    <button className="px-3.5 pt-1 pb-[5px] bg-[#F4F4F4] border border-[#F4F4F4] rounded-sm text-[#060709] text-[12px] leading-[150%] cursor-pointer ">
+                      {product.sizes[1]}
                     </button>
-                    <button className="px-3.5 pt-1 pb-[5px] bg-[#F4F4F4] border border-[#F4F4F4] rounded-sm text-[#060709] text-[12px] leading-[150%] ">
+                    <button className="px-3.5 pt-1 pb-[5px] bg-[#F4F4F4] border border-[#F4F4F4] rounded-sm text-[#060709] text-[12px] leading-[150%] cursor-pointer ">
                       {product.sizes[2]}
                     </button>
                   </div>
@@ -246,11 +247,17 @@ const CategoryDetail = async ({
                 <div className="flex gap-4 py-1.5 pl-2 pr-4 rounded-[10px] border border-[#F4F4F4] items-center md:px-4 md:py-2.5">
                   <Addup />
                   <div className="h-5 w-px bg-[#F4F4F4] "></div>
-                  <p className={`text-[12px] leading-[150%] ${product.inStock ? "text-button-green" : "text-[#EB2606] line-through"}`}>
+                  <p
+                    className={`text-[12px] leading-[150%] ${
+                      product.inStock
+                        ? "text-button-green"
+                        : "text-[#EB2606] line-through"
+                    }`}
+                  >
                     In Stock
                   </p>
                 </div>
-                <button className="bg-button-green px-6 py-[14.5px] rounded-[100px] flex gap-4 items-center md:px-8 md:py-4">
+                <button className="bg-button-green px-6 py-[14.5px] rounded-[100px] flex gap-4 items-center md:px-8 md:py-4 cursor-pointer">
                   <p className="text-[14px] font-medium leading-[150%] text-white md:text-[16px] ">
                     Add to Cart
                   </p>

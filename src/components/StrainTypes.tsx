@@ -28,7 +28,7 @@ const StrainTypes = () => {
           </div>
           <Link
             href="/"
-            className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+            className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
           >
             Shop Indica
           </Link>
@@ -56,7 +56,7 @@ const StrainTypes = () => {
           </div>
           <Link
             href="/"
-            className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+            className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
           >
             Shop Sativa
           </Link>
@@ -88,7 +88,7 @@ const StrainTypes = () => {
           </div>
           <Link
             href="/"
-            className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] "
+            className="text-button-green text-[14px] leading-[150%] text-nowrap underline text-left md:text-[16px] cursor-pointer"
           >
             Shop Hybrids
           </Link>

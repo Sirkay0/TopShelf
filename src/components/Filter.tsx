@@ -26,7 +26,7 @@ const Filter = () => {
         <div className="flex gap-2.5 items-center relative">
           <button
             onClick={() => setOpen(!open)}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden "
+            className="flex items-center gap-2 px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] text-[12px] leading-[150%] text-[#1A1E26] md:hidden cursor-pointer"
           >
             Filter
             <Image
@@ -101,7 +101,7 @@ const Filter = () => {
           Showing 1-30 of 393 results
         </p>
         <div className="flex gap-4 md:gap-3 items-center">
-          <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center">
+          <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center cursor-pointer">
             <img
               src={"/assets/icons/arrow-left.svg"}
               alt="Arrow left"
@@ -109,26 +109,26 @@ const Filter = () => {
             />
           </button>
           <div className="flex gap-2 items-center">
-            <button className="flex items-center justify-center bg-[#F2F6F4] rounded-[100px] w-8 h-8 md:w-9 md:h-9 text-[12px] md:text-[14px] leading-[150%] text-[#05422C] ">
+            <button className="flex items-center justify-center bg-[#F2F6F4] rounded-[100px] w-8 h-8 md:w-9 md:h-9 text-[12px] md:text-[14px] leading-[150%] text-[#05422C] cursor-pointer ">
               1
             </button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 md:text-[14px] md:w-9 md:h-9 text-[12px] leading-[150%] text-[#1A1E26]">
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 md:text-[14px] md:w-9 md:h-9 text-[12px] leading-[150%] text-[#1A1E26] cursor-pointer">
               2
             </button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26] cursor-pointer">
               3
             </button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26]">
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] md:text-[14px] md:w-9 md:h-9 leading-[150%] text-[#1A1E26] cursor-pointer">
               4
             </button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-5 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] ">
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-5 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] cursor-pointer">
               ...
             </button>
-            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] md:w-9 md:h-9">
+            <button className="flex items-center justify-center bg-white rounded-[100px] w-8 h-8 text-[12px] leading-[150%] text-[#1A1E26] md:text-[14px] md:w-9 md:h-9 cursor-pointer">
               55
             </button>
           </div>
-          <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center">
+          <button className="w-8 h-8 rounded-[100px] border border-[#F4F4F4] bg-white flex items-center justify-center cursor-pointer">
             <img
               src={"/assets/icons/arrow-right.svg"}
               alt="Arrow right"
