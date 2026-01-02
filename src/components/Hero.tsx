@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Bottun from "./Bottun";
 
 const Hero = () => {
@@ -24,10 +25,11 @@ const Hero = () => {
               Free Shipping
             </p>
           </div>
+          <Link href="/category">
           <Bottun
             Children="Shop All"
             classnames="text-[16px] md:text-[18px] px-10 py-3 md:py-4  md:px-11"
-          />
+          /></Link>
         </div>
       </div>
     </section>

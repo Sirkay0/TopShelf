@@ -1,11 +1,31 @@
 import ProductsCard from "@/components/ProductsCard";
 import Image from "next/image";
-import { products } from "../../../../product";
+import { Product, products } from "../../../../product";
 import ImageGallery from "@/components/ImageGallery";
 import TabSection from "@/components/TabSection";
 import Addup from "@/components/Addup";
 
-const CategoryDetail = () => {
+const CategoryDetail = async ({
+  params,
+}: {
+  params: 
+    Promise<{slug: string}>;
+}) => {
+  const {slug} = await params
+
+  const getProductDetails = async (slug: string): Promise<Product> => {
+    const foundProduct = products.find(
+      product => product.slug === slug
+    )
+
+    if (!foundProduct) {
+      throw new Error(`Product ${slug} is not available`)
+    }
+
+    return foundProduct
+  }
+
+  const product = await getProductDetails(slug)
   return (
     <>
       <div className="mt-[177px] px-6 md:px-16 pt-6 md:pt-10 ">
@@ -14,10 +34,10 @@ const CategoryDetail = () => {
           <div className="flex flex-col gap-5 md:w-1/2">
             <div className="flex flex-col gap-3 md:gap-4 items-start">
               <h2 className="text-[#9D9EA2] text-[12px] leading-[150%] tracking-[2px] md:text-[14px]  ">
-                CONCENTRATES
+                {product.category}
               </h2>
               <p className="text-[#060709] text-[20px] md:text-[32px] md:font-semibold font-medium leading-[150%] text-left md:tracking-[-1.5px] ">
-                Mix And Match Shatter/Budder 28g (4 X 7G)
+                {product.title}
               </p>
               <div className="flex gap-2 md:gap-4 items-center ">
                 <div className="bg-[#F2F6F4] rounded-sm px-2.5 pt-1 pb-[5px] md:rounded-lg md:px-4">
@@ -27,17 +47,17 @@ const CategoryDetail = () => {
                 </div>
                 <div className="bg-[#F2F6F4] rounded-sm px-2.5 pt-1 pb-[5px] md:rounded-lg md:px-4 ">
                   <p className="text-[12px] leading-[150%] text-[#05422C] ">
-                    Sativa 100%
+                    {product.strainType}
                   </p>
                 </div>
               </div>
               <div className="flex justify-between items-center w-full">
                 <div className="flex gap-2 md:gap-3 items-center">
                   <p className="text-[14px] leading-[150%] text-[#9D9EA2] line-through md:text-[16px] ">
-                    $200.00
+                    {`$${product.oldPrice}`}
                   </p>
                   <p className="text-[16px] font-medium leading-[150%] text-[#EB2606] md:text-[20px]">
-                    $120.00
+                    {`$${product.price}`}
                   </p>
                 </div>
                 <div className="flex gap-3 items-center md:gap-4">
@@ -48,13 +68,13 @@ const CategoryDetail = () => {
                       className="w-3.5 h-3.5 md:w-4 md:h-4"
                     />
                     <p className="text-[14px] leading-[150%] text-[#060709] md:text-[16px]  ">
-                      4.6/5
+                      {product.rating}/5
                     </p>
                   </div>
                   <div className="h-3 w-px bg-[#C8C9CB] "></div>
                   <div className="flex gap-1.5 items-center">
                     <p className="text-[14px] leading-[150%] text-[#060709] md:text-[16px] ">
-                      135
+                      {product.reviews}
                     </p>
                     <p className="text-[12px] leading-[150%] text-[#9D9EA2] md:text-[14px] ">
                       Reviews
@@ -145,13 +165,13 @@ const CategoryDetail = () => {
                   </h2>
                   <div className="flex gap-4 items-center ">
                     <button className="px-3.5 pt-1 pb-[5px] bg-[#F3FBF4] border border-button-green rounded-sm text-[#060709] text-[12px] leading-[150%] ">
-                      28g
+                      {product.sizes[0]}
                     </button>
                     <button className="px-3.5 pt-1 pb-[5px] bg-[#F4F4F4] border border-[#F4F4F4] rounded-sm text-[#060709] text-[12px] leading-[150%] ">
-                      1/2lb
+                     {product.sizes[1]}
                     </button>
                     <button className="px-3.5 pt-1 pb-[5px] bg-[#F4F4F4] border border-[#F4F4F4] rounded-sm text-[#060709] text-[12px] leading-[150%] ">
-                      1/4lb
+                      {product.sizes[2]}
                     </button>
                   </div>
                 </div>
@@ -226,7 +246,7 @@ const CategoryDetail = () => {
                 <div className="flex gap-4 py-1.5 pl-2 pr-4 rounded-[10px] border border-[#F4F4F4] items-center md:px-4 md:py-2.5">
                   <Addup />
                   <div className="h-5 w-px bg-[#F4F4F4] "></div>
-                  <p className="text-[12px] leading-[150%] text-button-green">
+                  <p className={`text-[12px] leading-[150%] ${product.inStock ? "text-button-green" : "text-[#EB2606] line-through"}`}>
                     In Stock
                   </p>
                 </div>
@@ -236,7 +256,7 @@ const CategoryDetail = () => {
                   </p>
                   <div className="h-3 w-px bg-white "></div>
                   <p className="text-[14px] text-white leading-[150%] font-medium md:text-[16px] ">
-                    $242.00
+                    {`$${product.price}`}
                   </p>
                 </button>
               </div>

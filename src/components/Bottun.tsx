@@ -27,7 +27,7 @@ const Bottun = ({
     <button
       ref={btnRef}
       onPointerEnter={handleMove}
-      className={`relative overflow-hidden ${classnames} leading-[150%] font-Lexend text-white  rounded-[100px]  bg-button-green   font-medium transition-all duration-300 group text-nowrap w-auto max-w-full inline-flex items-center justify-center`}
+      className={`relative overflow-hidden ${classnames} leading-[150%] font-Lexend text-white  rounded-[100px]  bg-button-green   font-medium transition-all duration-300 group text-nowrap w-auto max-w-full inline-flex items-center justify-center cursor-pointer`}
     >
       <span className="relative z-10 group-hover:text-button-green transition-all duration-300">
         {Children}

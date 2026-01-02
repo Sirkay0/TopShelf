@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Product } from "../../product";
 import Bottun from "./Bottun";
 
@@ -20,6 +21,7 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
     unit,
     inStock,
     badge,
+    slug,
   } = product;
 
   const variants = {
@@ -50,12 +52,13 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
   const current = variants[variant];
 
   return (
+    <Link href={`/category/${slug}`}>
     <div className={`${current.wrapper} flex  flex-col gap-6`}>
       <div
         className={`w-full ${current.imageBox} bg-[#F4F4F4] rounded-lg flex justify-center items-center relative`}
       >
         <img src={image} alt="brown-weed" className={`${current.image}`} />
-        {inStock ? (
+        {!inStock ? (
           <div
             className={`px-8 ${current.outOfStock} rounded-[100px] bg-[#05422C]/30 flex items-center justify-center backdrop-blur-sm absolute `}
           >
@@ -158,6 +161,7 @@ const ProductsCard = ({ product, variant = "carousel" }: ProductsCardType) => {
         />
       </div>
     </div>
+    </Link>
   );
 };
 
