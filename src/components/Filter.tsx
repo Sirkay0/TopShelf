@@ -6,9 +6,14 @@ import { products } from "../../product";
 import ProductsCard from "./ProductsCard";
 import FeaturedCarousel from "./FeaturedCarousel";
 import FilterBody from "./FilterBody";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 const Filter = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto"
+  }, [open])
 
   return (
     <div className="mt-4 px-6 md:px-0 flex flex-col gap-6 md:gap-16 ">

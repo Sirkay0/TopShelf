@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Notification from "./Notification";
 import Link from "next/link";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
 
   return (
     <header className="fixed flex flex-col top-0 left-0 bg-white pb-4 w-full z-100 shadow-lg ">
@@ -41,7 +45,9 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="flex items-center gap-4 justify-end w-1/2 md:w-1/4 md:order-3  pb-5 md:pb-0 lg:mx ">
-          <p className="text-text-gray text-sm font-normal cursor-pointer">Your Account</p>
+          <p className="text-text-gray text-sm font-normal cursor-pointer">
+            Your Account
+          </p>
           <div className="w-px h-3 bg-gray-400"></div>
           <div className="cursor-pointer">
             <img src="/assets/icons/bag.svg" alt="cart" />
@@ -91,37 +97,39 @@ const NavBar = () => {
           </div>
         </div>
         <div className="md:w-full w-[80%] md:overflow-x-auto md:flex min-[1080px]:justify-center max-md:border-t max-md:border-white ">
-        <nav className=" flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center  md:text-base lg:gap-8 md:font-normal   max-md:py-6 max-md:w-[80%] ">
-          <Link href="/category" 
-          onClick={() => setOpen(!open)}
-          className="text-nowrap cursor-pointer">
-            Shop All
-          </Link>
-          <a href="http://" className="text-nowrap">
-            Flower
-          </a>
-          <a href="http://" className="text-nowrap">
-            Edibles
-          </a>
-          <a href="http://" className="text-nowrap">
-            Concentrates
-          </a>
-          <a href="http://" className="text-nowrap">
-            Mushroom
-          </a>
-          <a href="http://" className="text-nowrap">
-            Promotions/Bundles
-          </a>
-          <a href="http://" className="text-nowrap">
-            Support
-          </a>
-          <a href="http://" className="text-nowrap">
-            Rewards
-          </a>
-          <a href="http://" className="text-nowrap">
-            Blog
-          </a>
-        </nav>
+          <nav className=" flex flex-col gap-6 text-white font-semibold text-left  md:text-text-gray md:flex-row md:items-center md:justify-center  md:text-base lg:gap-8 md:font-normal   max-md:py-6 max-md:w-[80%] ">
+            <Link
+              href="/category"
+              onClick={() => setOpen(!open)}
+              className="text-nowrap cursor-pointer"
+            >
+              Shop All
+            </Link>
+            <a href="http://" className="text-nowrap">
+              Flower
+            </a>
+            <a href="http://" className="text-nowrap">
+              Edibles
+            </a>
+            <a href="http://" className="text-nowrap">
+              Concentrates
+            </a>
+            <a href="http://" className="text-nowrap">
+              Mushroom
+            </a>
+            <a href="http://" className="text-nowrap">
+              Promotions/Bundles
+            </a>
+            <a href="http://" className="text-nowrap">
+              Support
+            </a>
+            <a href="http://" className="text-nowrap">
+              Rewards
+            </a>
+            <a href="http://" className="text-nowrap">
+              Blog
+            </a>
+          </nav>
         </div>
         <div className="flex items-center justify-center text-[12px] gap-4 py-5  border-t border-white text-white font-medium w-[80%] md:hidden">
           <p>Terms of Service</p>
