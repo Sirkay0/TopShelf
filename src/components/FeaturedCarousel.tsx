@@ -35,7 +35,7 @@ const FeaturedCarousel = () => {
           <div className="flex gap-2 items-center">
             <div className="flex gap-1.5 items-center ">
               <img
-                src="/assets/icons/star.svg"
+                src="/assets/icons/star-filled.svg"
                 alt="Star"
                 className="w-3 h-3"
               />

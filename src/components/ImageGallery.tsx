@@ -21,7 +21,7 @@ const ImageGallery = ({ productImg }: { productImg: string }) => {
   return (
     <>
       <div className="flex flex-col gap-4 md:gap-6 md:items-center w-full md:w-1/2 items-start bg-white">
-        <div className="w-full h-[342px] md:h-[520px] flex items-center justify-center border border-[#F4F4F4] rounded-2xl relative">
+        <div className="w-full h-[342px] md:h-[520px] flex items-center justify-center border border-[#F4F4F4] rounded-2xl relative ">
           <div className="relative w-60 md:w-100 aspect-square">
             <Image
               src={activeImage}

@@ -64,7 +64,7 @@ const CategoryDetail = async ({
                 <div className="flex gap-3 items-center md:gap-4">
                   <div className="flex gap-1.5 items-center ">
                     <img
-                      src="/assets/icons/star.svg"
+                      src="/assets/icons/star-filled.svg"
                       alt="Star"
                       className="w-3.5 h-3.5 md:w-4 md:h-4"
                     />

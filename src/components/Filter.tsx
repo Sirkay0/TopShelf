@@ -43,7 +43,7 @@ const Filter = () => {
           </button>
           <div className="flex px-3.5 py-2 rounded-[100px] border border-[#F4F4F4] gap-1 relative text-[12px] leading-[150%] text-[#1A1E26]">
             <label htmlFor="sort">Sort By</label>
-            <select name="sort" id="sort" className="appearance-none w-[50px] ">
+            <select name="sort" id="sort" className="appearance-none w-[50px] cursor-pointer ">
               <option value="dates">date</option>
               <option value="straintype">straintype</option>
               <option value="categogry">categogry</option>

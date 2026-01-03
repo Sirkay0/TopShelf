@@ -28,7 +28,7 @@ const TabRefer = () => {
               </p>
             </div>
             <div className="self-center">
-              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px] cursor-pointer">
+              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px] cursor-copy">
                 <div className="relative h-[18px] aspect-square">
                   <Image
                     src="/assets/icons/copy.svg"
@@ -53,7 +53,7 @@ const TabRefer = () => {
               </p>
             </div>
             <div className="self-center">
-              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px] cursor-pointer">
+              <button className="flex items-center justify-center bg-white h-10 w-10 rounded-[100px] cursor-copy">
                 <div className="relative h-[18px] aspect-square">
                   <Image
                     src="/assets/icons/copy.svg"
@@ -73,7 +73,7 @@ const TabRefer = () => {
               <div className="relative h-[26px] aspect-square md:h-12">
                 <Image
                   src="/assets/icons/facebook.svg"
-                  alt="Copy"
+                  alt="Facebook"
                   fill
                   className="object-cover"
                 />
@@ -86,7 +86,7 @@ const TabRefer = () => {
               <div className="relative h-[26px] aspect-square md:h-12">
                 <Image
                   src="/assets/icons/twitter.svg"
-                  alt="Copy"
+                  alt="Twitter"
                   fill
                   className="object-cover"
                 />
@@ -99,7 +99,7 @@ const TabRefer = () => {
               <div className="relative h-[26px] aspect-square md:h-12">
                 <Image
                   src="/assets/icons/whatsapp.svg"
-                  alt="Copy"
+                  alt="Whatsapp"
                   fill
                   className="object-cover"
                 />

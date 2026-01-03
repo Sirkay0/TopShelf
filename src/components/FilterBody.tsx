@@ -39,13 +39,13 @@ const FilterBody = ({ setOpen, open }: FilterBodyProp) => {
             <label
               htmlFor={category.value}
               key={category.value}
-              className="flex gap-3 items-center"
+              className="flex gap-3 items-center cursor-pointer"
             >
               <input
                 type="radio"
                 name="categogry"
                 id={category.value}
-                className="accent-green-600 w-5 h-5"
+                className="accent-green-600 w-5 h-5 cursor-pointer"
               />
               <span className="text-[14px] leading-[150%] text-left text-[#46494F] ">
                 {category.label}
@@ -68,13 +68,13 @@ const FilterBody = ({ setOpen, open }: FilterBodyProp) => {
             <label
               htmlFor={order.value}
               key={order.value}
-              className="flex gap-3 items-center"
+              className="flex gap-3 items-center cursor-pointer"
             >
               <input
                 type="radio"
                 name="order"
                 id={order.value}
-                className="accent-green-600 w-5 h-5"
+                className="accent-green-600 w-5 h-5 cursor-pointer"
               />
               <span className="text-[14px] leading-[150%] text-left text-[#46494F] ">
                 {order.label}
@@ -87,12 +87,12 @@ const FilterBody = ({ setOpen, open }: FilterBodyProp) => {
         <h2 className="text-[12px] leading-[150%] font-light text-left tracking-[1px] text-[#717378] ">
           FILTER BY REVIEWS
         </h2>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 ">
           {reviewOptions.map((review) => (
             <label
               htmlFor={review.value}
               key={review.value}
-              className="flex gap-3 items-center"
+              className="flex gap-3 items-center cursor-pointer"
             >
               <input
                 type="radio"
