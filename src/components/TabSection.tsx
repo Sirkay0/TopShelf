@@ -13,14 +13,14 @@ const TabSection = () => {
 
   return (
     <section className="flex flex-col gap-5 w-full md:gap-[31px]">
-      <div className="flex gap-3 pb-5 w-full md:pr-2.5 md:gap-6 md:pb-6 text-nowrap  ">
+      <div className="flex gap-3 pb-5 flex-wrap md:pr-2.5 md:gap-6 md:pb-6 text-nowrap  ">
         <button
           onClick={() => setActiveTab("description")}
           className={`px-5 rounded-[100px] py-[7px] text-[12px] ${
             activeTab === "description"
               ? "bg-[#F2F6F4] border border-[#05422C]"
               : "bg-white border border-[#F4F4F4]"
-          } leading-[150%] font-medium text-[#05422C] min-w-[108px] w-full md:py-2 md:text-[16px] cursor-pointer`}
+          } leading-[150%] font-medium text-[#05422C] min-w-[108px] w-full md:py-2 md:text-[16px] cursor-pointer flex-1`}
         >
           Description
         </button>
@@ -30,10 +30,12 @@ const TabSection = () => {
             activeTab === "testimonial"
               ? "bg-[#F2F6F4] border border-[#05422C]"
               : "bg-white border border-[#F4F4F4]"
-          } py-[7px] text-[12px] leading-[150%] font-medium flex gap-2 items-center justify-center min-w-[108px] w-full md:py-2 cursor-pointer`}
+          } py-[7px] text-[12px] leading-[150%] font-medium flex gap-2 items-center justify-center min-w-[108px] w-full md:py-2 cursor-pointer flex-1`}
         >
           <p className="text-[#46494F] md:text-[16px]">Reviews</p>
-          <p className="text-[#9D9EA2] md:text-[14px]">({testimonials.length})</p>
+          <p className="text-[#9D9EA2] md:text-[14px]">
+            ({testimonials.length})
+          </p>
         </button>
         <button
           onClick={() => setActiveTab("refer")}
@@ -41,7 +43,7 @@ const TabSection = () => {
             activeTab === "refer"
               ? "bg-[#F2F6F4] border border-[#05422C]"
               : "bg-white border border-[#F4F4F4]"
-          } py-[7px] text-[12px] leading-[150%] font-medium flex gap-2 items-center text-[#46494F] min-w-[108px] w-full justify-center md:py-2 md:text-[16px] cursor-pointer`}
+          } py-[7px] text-[12px] leading-[150%] font-medium flex gap-2 items-center text-[#46494F] min-w-[108px] w-full justify-center md:py-2 md:text-[16px] cursor-pointer flex-1`}
         >
           Refer a Friend
         </button>

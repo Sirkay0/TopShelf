@@ -49,8 +49,11 @@ const NavBar = () => {
             Your Account
           </p>
           <div className="w-px h-3 bg-gray-400"></div>
-          <div className="cursor-pointer">
+          <div className="cursor-pointer w-6 h-6 relative">
             <img src="/assets/icons/bag.svg" alt="cart" />
+            <div className="bg-[#EB2606] rounded-[100px] w-3.5 h-3.5 text-white leading-[150%] text-[8px] flex items-center justify-center absolute top-2 left-3.5 md:w-4 md:h-4 md:text-[10px] md:top-[9px]">
+                0
+            </div>
           </div>
         </div>
         <div className="w-full pt-5 flex items-center justify-center gap-2 md:order-2 md:px-0 md:pt-0 border-t border-gray-300 md:border-none md:w-2/4 ">

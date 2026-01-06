@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="-mt-[180px] md:-mt-[250px] pb-16 bg-linear-to-b from-[#1A1E26] to-[#01100B] pt-60 md:pt-[380px] flex justify-center">
+    <footer className="-mt-[180px] md:-mt-[250px] pb-16 bg-linear-to-b from-[#1A1E26] to-[#01100B] pt-60 md:pt-[380px] flex justify-center w-full">
       <div className="w-[80%] flex flex-col gap-16   ">
         <div className="flex flex-col gap-8 lg:flex-row">
-          <div className="flex flex-col gap-6 min-w-[276px]">
+          <div className="flex flex-col gap-6 lg:min-w-[276px]">
             <img
               src="/assets/images/white-logo.svg"
               alt="Topshelf Logo"
@@ -53,7 +53,7 @@ const Footer = () => {
               <h2 className="text-[20px] font-medium leading-[150%] text-left text-white ">
                 MORE
               </h2>
-              <div className="flex flex-col gap-4 text-[14px] leading-[150%] text-[#9D9EA2] text-nowrap md:flex-row md:gap-8 ">
+              <div className="flex flex-col gap-4 text-[14px] leading-[150%] text-[#9D9EA2] text-nowrap max-[310px]:text-wrap md:flex-row md:gap-8 ">
                 <div className="flex flex-col gap-4 w-1/2">
                   <p>Buy weed online in Canada</p>
                   <p>Buy weed online in New Brunswick</p>

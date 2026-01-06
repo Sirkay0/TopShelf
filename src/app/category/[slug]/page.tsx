@@ -159,8 +159,8 @@ const CategoryDetail = async ({
               </p>
             </div>
             <div className="flex flex-col gap-4 md:gap-6 md:items-start">
-              <div className="flex flex-col gap-6 md:flex-row md:w-full">
-                <div className="flex flex-col gap-2 w-full md:gap-3 md:w-1/2">
+              <div className="flex flex-col gap-6 md:flex-row md:w-full flex-wrap">
+                <div className="flex flex-col flex-1 gap-2 w-full md:gap-3 md:w-1/2">
                   <h2 className="text-[#717378] text-[12px] leading-[150%] tracking-[1px] font-light ">
                     WEIGHT
                   </h2>
@@ -176,7 +176,7 @@ const CategoryDetail = async ({
                     </button>
                   </div>
                 </div>
-                <div className="flex flex-col gap-2 items-start w-full md:gap-3 md:w-1/2">
+                <div className="flex flex-col flex-1 gap-2 items-start w-full md:gap-3 md:w-1/2">
                   <h2 className="text-[#717378] text-[12px] leading-[150%] tracking-[1px] font-light ">
                     Add Integra Pack
                   </h2>
@@ -243,12 +243,12 @@ const CategoryDetail = async ({
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col gap-4 py-5 border-t border-[#F4F4F4] border-b items-start md:flex-row md:justify-between">
+              <div className="flex flex-col gap-4 py-5 border-t border-[#F4F4F4] border-b items-start md:flex-row md:justify-between flex-wrap">
                 <div className="flex gap-4 py-1.5 pl-2 pr-4 rounded-[10px] border border-[#F4F4F4] items-center md:px-4 md:py-2.5">
                   <Addup />
                   <div className="h-5 w-px bg-[#F4F4F4] "></div>
                   <p
-                    className={`text-[12px] leading-[150%] ${
+                    className={`text-[12px] leading-[150%] text-nowrap ${
                       product.inStock
                         ? "text-button-green"
                         : "text-[#EB2606] line-through"
@@ -258,7 +258,7 @@ const CategoryDetail = async ({
                   </p>
                 </div>
                 <button className="bg-button-green px-6 py-[14.5px] rounded-[100px] flex gap-4 items-center md:px-8 md:py-4 cursor-pointer">
-                  <p className="text-[14px] font-medium leading-[150%] text-white md:text-[16px] ">
+                  <p className="text-[14px] font-medium leading-[150%] text-white md:text-[16px] text-nowrap">
                     Add to Cart
                   </p>
                   <div className="h-3 w-px bg-white "></div>
@@ -345,7 +345,7 @@ const CategoryDetail = async ({
           <h2 className="text-[20px] leading-[150%] text-left text-[#1A1E26] md:text-[24px]">
             Featured Product
           </h2>
-          <div className="pr-6 w-full md:pr-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-8">
+          <div className=" w-full max-[383px]:grid-cols-1  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-8">
             {products.slice(0, 4).map((product) => (
               <ProductsCard key={product.id} product={product} variant="grid" />
             ))}

@@ -7,6 +7,8 @@ import Bottun from "./Bottun";
 
 const TabTestimonial = () => {
   const [showAll, setShowAll] = useState<boolean>(false);
+  const [rating, setRating] = useState<number>(0);
+  const [hovered, setHovered] = useState<number>(0);
 
   const visibleTestimonials = showAll ? testimonials : testimonials.slice(0, 2);
 
@@ -59,28 +61,54 @@ const TabTestimonial = () => {
       </div>
 
       <form className="flex flex-col gap-6 items-start w-full">
-        <h2 className="text-[#060709] text-[18px] leading-[150%] ">Add A Review</h2>
+        <h2 className="text-[#060709] text-[18px] leading-[150%] ">
+          Add A Review
+        </h2>
         <div className="flex flex-col gap-4 items-start w-full">
           <div className="flex gap-4 items-center w-full ">
             <p className="text-[#46494F] text-[14px] leading-[150%]  ">
               Your rating
             </p>
             <p className="text-[#46494F] text-[14px] leading-[150%]  ">:</p>
-            <div className="relative aspect-136/24 w-[130px]">
-              <Image
-                src="/assets/icons/1-Star.svg"
-                alt="4-Stars"
-                fill
-                className="object-cover"
-              />
+            <div className="flex gap-1">
+              {[1, 2, 3, 4, 5].map((star) => {
+                const isActive = star <= (hovered || rating);
+
+                return (
+                  <button key={star} onClick={() => setRating(star)}
+                  onMouseEnter={() => setHovered(star)}
+                  onMouseLeave={() => setHovered(0)}>
+                    <img
+                      src={
+                        isActive
+                          ? "/assets/icons/star-filled.svg"
+                          : "/assets/icons/star-unfilled.svg"
+                      }
+                      alt={`${star} star`}
+                      className="w-6 h-6"
+                    />
+                  </button>
+                );
+              })}
             </div>
           </div>
           <div className="flex flex-col gap-2 items-start w-full">
-            <h2 className="text-[#46494F] text-[14px] leading-[150%] ">Your Review <span className="text-[#EB2606] ">*</span></h2>
-            <textarea name="" id="" className="p-4 rounded-lg border border-[#F4F4F4] bg-white text-[#C8C9CB] text-[14px] leading-[150%] text-left w-full " 
-            placeholder="Enter your review" rows={3} required></textarea>
+            <h2 className="text-[#46494F] text-[14px] leading-[150%] ">
+              Your Review <span className="text-[#EB2606] ">*</span>
+            </h2>
+            <textarea
+              name=""
+              id=""
+              className="p-4 rounded-lg border border-[#F4F4F4] bg-white text-[#C8C9CB] text-[14px] leading-[150%] text-left w-full "
+              placeholder="Enter your review"
+              rows={3}
+              required
+            ></textarea>
           </div>
-          <Bottun Children="Submit" classnames="px-10 py-4 text-[16px] leading-[150%]" />
+          <Bottun
+            Children="Submit"
+            classnames="px-10 py-4 text-[16px] leading-[150%]"
+          />
         </div>
       </form>
     </div>

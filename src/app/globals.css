@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
-
 @theme inline {
   --color-secondary: #05422c;
   --color-white: #ffffff;
   --color-text-gray: #46494f;
-  --color-button-green: #17AF26;
+  --color-button-green: #17af26;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+  user-select: none;
 }
 
 html {
