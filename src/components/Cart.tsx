@@ -43,7 +43,7 @@ const Cart = ({ up, setUp }: CartProps) => {
 
   return (
     <div
-      className="fixed h-[90vh] bg-white bottom-0 z-900  rounded-t-3xl w-full md:h-full md:rounded-none md:w-[42%] md:right-0 "
+      className="fixed h-[88dvh] bg-white bottom-0 z-900  rounded-t-3xl w-full md:h-full md:rounded-none md:w-[42%] md:right-0 "
       style={{
         transform: up ? `translateY(${translateY}px) ` : `translateY(100%)`,
         transition: isDragging.current ? "none" : "all 0.3s ease-out",
