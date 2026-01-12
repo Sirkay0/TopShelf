@@ -60,7 +60,7 @@ const Cart = ({ up, setUp }: CartProps) => {
   return (
     <div
       className={`fixed h-[90dvh] bg-white bottom-0 z-900  rounded-t-3xl w-full md:h-full md:rounded-none md:w-[42%] md:right-0 transition-all duration-300 ease-out ${
-        up ? "translate-x-0" : "translate-x-[120%]"
+        up ? "md:translate-x-0" : "md:translate-x-[120%]"
       }`}
       style={
         isDesktop
