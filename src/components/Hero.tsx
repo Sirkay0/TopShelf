@@ -3,7 +3,7 @@ import Bottun from "./Bottun";
 
 const Hero = () => {
   return (
-    <section className="mt-35 md:mt-40 bg-secondary bg-[url(/assets/images/mobile-bg-cover.png)] md:bg-[url(/assets/images/desktop-bg-cover.png)] h-[820px] w-full bg-cover bg-no-repeat bg-bottom  ">
+    <section className="mt-35 md:mt-40 bg-[#3a6a58] bg-[url(/assets/images/mobile-bg-cover.png)] md:bg-[url(/assets/images/desktop-bg-cover.png)] h-[820px] w-full bg-cover bg-no-repeat bg-bottom ">
       <div className="flex flex-col items-start  py-25 px-6 gap-10 md:gap-[102px] justify-center md:w-4/7">
         <div className="flex flex-col gap-3.5 md:gap-4 justify-center">
           <p className="text-[#F2BC1B] text-sm font-bold tracking-[4px] le md:text-base">

@@ -27,7 +27,6 @@ const Cart = ({ up, setUp }: CartProps) => {
     };
   }, []);
 
-
   const startY = useRef(0);
   const isDragging = useRef(false);
 
@@ -60,16 +59,19 @@ const Cart = ({ up, setUp }: CartProps) => {
 
   return (
     <div
-      className="fixed h-[90dvh] bg-white bottom-0 z-900  rounded-t-3xl w-full md:h-full md:rounded-none md:w-[42%] md:right-0 "
+      className={`fixed h-[90dvh] bg-white bottom-0 z-900  rounded-t-3xl w-full md:h-full md:rounded-none md:w-[42%] md:right-0 transition-all duration-300 ease-out ${
+        up ? "translate-x-0" : "translate-x-[120%]"
+      }`}
       style={
-        isDesktop ? {
-          transform: up ? "translateX(0)" : "translateX(110%)",
-          transition: "all 0.3s ease-out"
-        } :
-        {
-        transform: up ? `translateY(${translateY}px) ` : `translateY(100%)`,
-        transition: isDragging.current ? "none" : "all 0.3s ease-out",
-      }}
+        isDesktop
+          ? {}
+          : {
+              transform: up
+                ? `translateY(${translateY}px) `
+                : `translateY(100%)`,
+              transition: isDragging.current ? "none" : "all 0.3s ease-out",
+            }
+      }
     >
       <div className="flex flex-col gap-5 pt-8 pb-6 px-6 w-full relative items-center md:gap-8 md:p-8">
         <div
@@ -80,7 +82,10 @@ const Cart = ({ up, setUp }: CartProps) => {
         >
           <div className="bg-[#F4F4F4] w-14 h-1.5 rounded-[100px] "></div>
         </div>
-        <div onClick={() => setUp(false)} className="flex justify-center items-center w-10 h-10 rounded-[100px] bg-white absolute -left-14 top-3/5 max-md:hidden">
+        <div
+          onClick={() => setUp(false)}
+          className="flex justify-center items-center w-10 h-10 rounded-[100px] bg-white absolute -left-14 top-3/5 max-md:hidden"
+        >
           <div className="relative aspect-square w-5">
             <Image
               src="/assets/icons/arrow-right.svg"
