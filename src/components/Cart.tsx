@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Bottun from "./Bottun";
-import { ReactEventHandler, useRef, useState } from "react";
-import { setuid } from "process";
+import { useEffect, useRef, useState } from "react";
 
 type CartProps = {
   up: boolean;
@@ -10,6 +9,24 @@ type CartProps = {
 
 const Cart = ({ up, setUp }: CartProps) => {
   const [translateY, setTranslateY] = useState<number>(0);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDesktop(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
 
   const startY = useRef(0);
   const isDragging = useRef(false);
@@ -44,7 +61,12 @@ const Cart = ({ up, setUp }: CartProps) => {
   return (
     <div
       className="fixed h-[90dvh] bg-white bottom-0 z-900  rounded-t-3xl w-full md:h-full md:rounded-none md:w-[42%] md:right-0 "
-      style={{
+      style={
+        isDesktop ? {
+          transform: up ? "translateX(0)" : "translateX(110%)",
+          transition: "all 0.3s ease-out"
+        } :
+        {
         transform: up ? `translateY(${translateY}px) ` : `translateY(100%)`,
         transition: isDragging.current ? "none" : "all 0.3s ease-out",
       }}
@@ -58,7 +80,7 @@ const Cart = ({ up, setUp }: CartProps) => {
         >
           <div className="bg-[#F4F4F4] w-14 h-1.5 rounded-[100px] "></div>
         </div>
-        <div className="flex justify-center items-center w-10 h-10 rounded-[100px] bg-white absolute -left-14 top-3/5 max-md:hidden">
+        <div onClick={() => setUp(false)} className="flex justify-center items-center w-10 h-10 rounded-[100px] bg-white absolute -left-14 top-3/5 max-md:hidden">
           <div className="relative aspect-square w-5">
             <Image
               src="/assets/icons/arrow-right.svg"
