@@ -3,13 +3,15 @@
 import { useEffect, useState } from "react";
 import Notification from "./Notification";
 import Link from "next/link";
+import Cart from "./Cart";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [up, setUp] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "auto";
-  }, [open]);
+    document.body.style.overflow = open || up ? "hidden" : "auto";
+  }, [open, up]);
 
   return (
     <header className="fixed flex flex-col top-0 left-0 bg-white pb-4 w-full z-100 shadow-lg ">
@@ -49,10 +51,13 @@ const NavBar = () => {
             Your Account
           </p>
           <div className="w-px h-3 bg-gray-400"></div>
-          <div className="cursor-pointer w-6 h-6 relative">
+          <div
+            onClick={() => setUp(true)}
+            className="cursor-pointer w-6 h-6 relative"
+          >
             <img src="/assets/icons/bag.svg" alt="cart" />
             <div className="bg-[#EB2606] rounded-[100px] w-3.5 h-3.5 text-white leading-[150%] text-[8px] flex items-center justify-center absolute top-2 left-3.5 md:w-4 md:h-4 md:text-[10px] md:top-[9px]">
-                0
+              0
             </div>
           </div>
         </div>
@@ -74,15 +79,19 @@ const NavBar = () => {
         </div>
       </div>
 
-      {open && (
-        <div
-          onClick={() => setOpen(!open)}
-          className="fixed inset-0 bg-black/60 z-40 md:hidden "
-        ></div>
-      )}
+      {open ||
+        (up && (
+          <div
+            onClick={() => {
+              setOpen(false);
+              setUp(false);
+            }}
+            className={`fixed inset-0 bg-black/60 z-40 ${open ? "md:hidden" : ""}`}
+          ></div>
+        ))}
 
       <div
-        className={`absolute bg-[#02291b] top-8 left-0 w-4/5  opacity-80 shadow-lg transform  transition-all ease-in-out duration-300 z-600 flex flex-col items-center ${
+        className={`absolute bg-[#02291b] top-8 left-0 w-4/5  opacity-80 shadow-lg transform  transition-all ease-in-out duration-300 max-md:z-600 flex flex-col items-center ${
           open ? "translate-x-0 " : "-translate-x-[761px]"
         } max-md:text-[16px] max-md:leading-[150%]
         md:static md:transform-none md:translate-x-0 md:h-auto md:opacity-100 md:bg-white md:shadow-none md:w-full md:py-4 md:px-[68px] `}
@@ -140,6 +149,7 @@ const NavBar = () => {
           <p>Privacy Policy</p>
         </div>
       </div>
+      <Cart up={up} setUp={setUp} />
     </header>
   );
 };
