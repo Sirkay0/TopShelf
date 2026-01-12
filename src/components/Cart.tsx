@@ -54,8 +54,10 @@ const Cart = ({ up, setUp }: CartProps) => {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className="bg-[#F4F4F4] w-10 h-1 rounded-[100px] absolute top-[5px] md:hidden"
-        ></div>
+          className="absolute top-[5px] md:hidden w-full flex justify-center items-center"
+        >
+          <div className="bg-[#F4F4F4] w-14 h-1.5 rounded-[100px] "></div>
+        </div>
         <div className="flex justify-center items-center w-10 h-10 rounded-[100px] bg-white absolute -left-14 top-3/5 max-md:hidden">
           <div className="relative aspect-square w-5">
             <Image
