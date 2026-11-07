@@ -13,7 +13,7 @@ An e-commerce website built with Next.js and TypeScript.
 Next.js, TypeScript, [Tailwind CSS: confirm]
 
 ## My role
-I built [list your parts, such as the category carousel, product page, and testimonials] in collaboration with another developer.
+I built All the part, such as the category carousel, product page, and testimonials].
 
 ## Run locally
 npm install
