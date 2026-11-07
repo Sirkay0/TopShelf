@@ -2,7 +2,7 @@
 
 An e-commerce website built with Next.js and TypeScript.
 
-**Live demo:** [add your Vercel link]
+**Live demo:** (https://topshelf-weed.netlify.app/)
 
 ## Features
 - Category pages with a carousel
